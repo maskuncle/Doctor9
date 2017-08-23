@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8198197C03D9E9A3FFD9D603 /* libPods-Doctor9.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F2365F570FADA3B50415D1 /* libPods-Doctor9.a */; };
 		8929CB2B1F4D985600C9BE09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8929CB2A1F4D985600C9BE09 /* main.m */; };
 		8929CB2E1F4D985600C9BE09 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8929CB2D1F4D985600C9BE09 /* AppDelegate.m */; };
 		8929CB311F4D985600C9BE09 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8929CB301F4D985600C9BE09 /* ViewController.m */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F92D793638851F09EC66D5E /* Pods-Doctor9.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doctor9.release.xcconfig"; path = "Pods/Target Support Files/Pods-Doctor9/Pods-Doctor9.release.xcconfig"; sourceTree = "<group>"; };
 		8929CB261F4D985600C9BE09 /* Doctor9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Doctor9.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8929CB2A1F4D985600C9BE09 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8929CB2C1F4D985600C9BE09 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +53,8 @@
 		8929CB4A1F4D985600C9BE09 /* Doctor9UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Doctor9UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8929CB4E1F4D985600C9BE09 /* Doctor9UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Doctor9UITests.m; sourceTree = "<group>"; };
 		8929CB501F4D985600C9BE09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4F2365F570FADA3B50415D1 /* libPods-Doctor9.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Doctor9.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC64740B8F0E38D5764DBECD /* Pods-Doctor9.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doctor9.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Doctor9/Pods-Doctor9.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8198197C03D9E9A3FFD9D603 /* libPods-Doctor9.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		302B8A3092710615AA60864A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B4F2365F570FADA3B50415D1 /* libPods-Doctor9.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8929CB1D1F4D985600C9BE09 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +98,8 @@
 				8929CB421F4D985600C9BE09 /* Doctor9Tests */,
 				8929CB4D1F4D985600C9BE09 /* Doctor9UITests */,
 				8929CB271F4D985600C9BE09 /* Products */,
+				C55D7F702A426A4904ABAEC5 /* Pods */,
+				302B8A3092710615AA60864A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +155,15 @@
 			path = Doctor9UITests;
 			sourceTree = "<group>";
 		};
+		C55D7F702A426A4904ABAEC5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CC64740B8F0E38D5764DBECD /* Pods-Doctor9.debug.xcconfig */,
+				1F92D793638851F09EC66D5E /* Pods-Doctor9.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8929CB531F4D985600C9BE09 /* Build configuration list for PBXNativeTarget "Doctor9" */;
 			buildPhases = (
+				AFD2D15AF4BF1E6FD12FCE6A /* Check Pods Manifest.lock */,
 				8929CB221F4D985600C9BE09 /* Sources */,
 				8929CB231F4D985600C9BE09 /* Frameworks */,
 				8929CB241F4D985600C9BE09 /* Resources */,
+				5BEF1C24DE8AA9C01A48196A /* Embed Pods Frameworks */,
+				1566802435A6BDF28190D645 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,7 +234,6 @@
 				TargetAttributes = {
 					8929CB251F4D985600C9BE09 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 3ZR3KW724E;
 					};
 					8929CB3E1F4D985600C9BE09 = {
 						CreatedOnToolsVersion = 7.2;
@@ -267,6 +293,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1566802435A6BDF28190D645 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Doctor9/Pods-Doctor9-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5BEF1C24DE8AA9C01A48196A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Doctor9/Pods-Doctor9-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFD2D15AF4BF1E6FD12FCE6A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8929CB221F4D985600C9BE09 /* Sources */ = {
@@ -414,8 +488,10 @@
 		};
 		8929CB541F4D985600C9BE09 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC64740B8F0E38D5764DBECD /* Pods-Doctor9.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Doctor9/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hgj.Doctor9;
@@ -425,8 +501,10 @@
 		};
 		8929CB551F4D985600C9BE09 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F92D793638851F09EC66D5E /* Pods-Doctor9.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Doctor9/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hgj.Doctor9;
@@ -501,6 +579,7 @@
 				8929CB551F4D985600C9BE09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8929CB561F4D985600C9BE09 /* Build configuration list for PBXNativeTarget "Doctor9Tests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +588,7 @@
 				8929CB581F4D985600C9BE09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8929CB591F4D985600C9BE09 /* Build configuration list for PBXNativeTarget "Doctor9UITests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +597,7 @@
 				8929CB5B1F4D985600C9BE09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
