@@ -25,6 +25,7 @@
 		892C33E91F4EC4BD00026DE7 /* guide3.png in Resources */ = {isa = PBXBuildFile; fileRef = 892C33E51F4EC4BD00026DE7 /* guide3.png */; };
 		892C33EA1F4EC4BD00026DE7 /* guide4.png in Resources */ = {isa = PBXBuildFile; fileRef = 892C33E61F4EC4BD00026DE7 /* guide4.png */; };
 		892C33ED1F4ED58F00026DE7 /* GJWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 892C33EC1F4ED58F00026DE7 /* GJWebViewProgressView.m */; };
+		894C25B91F4F075900ABD4EF /* ADWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 894C25B81F4F075900ABD4EF /* ADWebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,8 @@
 		892C33E61F4EC4BD00026DE7 /* guide4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guide4.png; sourceTree = "<group>"; };
 		892C33EB1F4ED58F00026DE7 /* GJWebViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJWebViewProgressView.h; sourceTree = "<group>"; };
 		892C33EC1F4ED58F00026DE7 /* GJWebViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJWebViewProgressView.m; sourceTree = "<group>"; };
+		894C25B71F4F075900ABD4EF /* ADWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADWebViewController.h; sourceTree = "<group>"; };
+		894C25B81F4F075900ABD4EF /* ADWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADWebViewController.m; sourceTree = "<group>"; };
 		8D8185CA71AD9C417E5525B5 /* Pods-Doctor9.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doctor9.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Doctor9/Pods-Doctor9.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -235,6 +238,8 @@
 			children = (
 				892C33D71F4EC04300026DE7 /* SplashViewController.h */,
 				892C33D81F4EC04300026DE7 /* SplashViewController.m */,
+				894C25B71F4F075900ABD4EF /* ADWebViewController.h */,
+				894C25B81F4F075900ABD4EF /* ADWebViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -471,6 +476,7 @@
 			files = (
 				8929CB2E1F4D985600C9BE09 /* AppDelegate.m in Sources */,
 				892C33ED1F4ED58F00026DE7 /* GJWebViewProgressView.m in Sources */,
+				894C25B91F4F075900ABD4EF /* ADWebViewController.m in Sources */,
 				892C33D01F4EBBC100026DE7 /* BaseViewController.m in Sources */,
 				8929CB2B1F4D985600C9BE09 /* main.m in Sources */,
 				892C33E21F4EC3FA00026DE7 /* GuideView.m in Sources */,

@@ -23,6 +23,30 @@
     return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
 }
 
+#pragma mark - get some obj
++ (NSString *)getMyDataPath{
+    NSString *canhePath = [self getDocumentDir];
+    NSString *mydatePath = [canhePath stringByAppendingPathComponent:UserName];
+    BOOL isDirectory = YES;
+    NSFileManager *filemanager = [NSFileManager defaultManager];
+    if(![filemanager fileExistsAtPath:mydatePath isDirectory:&isDirectory]) {
+        [filemanager createDirectoryAtPath:mydatePath withIntermediateDirectories:YES attributes:nil error:nil];
+    }
+    return mydatePath;
+}
+
++(NSString *)getDocumentDir{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docDir = [paths objectAtIndex:0];
+    NSString *DocumentDir = [docDir stringByAppendingPathComponent:@"Doctor9/"];
+    NSFileManager *filemanager = [NSFileManager defaultManager];
+    BOOL isDirectory = YES;
+    if(![filemanager fileExistsAtPath:DocumentDir isDirectory:&isDirectory]){
+        [filemanager createDirectoryAtPath:DocumentDir withIntermediateDirectories:YES attributes:nil error:nil];
+    }
+    //NSLog(@"----canheDirBase = %@",canheDirBase);
+    return DocumentDir;
+}
 
 #pragma mark - key & value
 + (NSString*)getVersion {

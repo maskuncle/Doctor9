@@ -9,14 +9,21 @@
 #import <Foundation/Foundation.h>
 
 //key
+#define UserName            @"10001001"         //[AppDelegate getUserItem].mUsername
 #define VERSION_INFO_KEY    @"version_info"
 
 @interface ConfigUtil : NSObject
+//MachineInfo
 + (NSString*)getSysVerison;
 + (NSString*)getAppVersion;
 + (NSString*)getAppBuild;
 
+//get action
++ (NSString *)getMyDataPath;
++ (NSString *)getDocumentDir;
 
+
+//key - value
 + (NSString*)getVersion;
 + (void)setVersion:(NSString* )version;
 
