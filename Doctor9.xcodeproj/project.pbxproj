@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8198197C03D9E9A3FFD9D603 /* libPods-Doctor9.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F2365F570FADA3B50415D1 /* libPods-Doctor9.a */; };
+		19A927DCAF77696AE9DD9234 /* libPods-Doctor9.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6443AF8C9E03FC53D143E594 /* libPods-Doctor9.a */; };
 		8929CB2B1F4D985600C9BE09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8929CB2A1F4D985600C9BE09 /* main.m */; };
 		8929CB2E1F4D985600C9BE09 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8929CB2D1F4D985600C9BE09 /* AppDelegate.m */; };
 		8929CB311F4D985600C9BE09 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8929CB301F4D985600C9BE09 /* ViewController.m */; };
@@ -16,6 +16,7 @@
 		8929CB391F4D985600C9BE09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8929CB371F4D985600C9BE09 /* LaunchScreen.storyboard */; };
 		8929CB441F4D985600C9BE09 /* Doctor9Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8929CB431F4D985600C9BE09 /* Doctor9Tests.m */; };
 		8929CB4F1F4D985600C9BE09 /* Doctor9UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8929CB4E1F4D985600C9BE09 /* Doctor9UITests.m */; };
+		892C33B01F4EB00900026DE7 /* welcome.png in Resources */ = {isa = PBXBuildFile; fileRef = 892C33AF1F4EB00900026DE7 /* welcome.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1F92D793638851F09EC66D5E /* Pods-Doctor9.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doctor9.release.xcconfig"; path = "Pods/Target Support Files/Pods-Doctor9/Pods-Doctor9.release.xcconfig"; sourceTree = "<group>"; };
+		22003750A4076C3B1260FCC9 /* Pods-Doctor9.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doctor9.release.xcconfig"; path = "Pods/Target Support Files/Pods-Doctor9/Pods-Doctor9.release.xcconfig"; sourceTree = "<group>"; };
+		6443AF8C9E03FC53D143E594 /* libPods-Doctor9.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Doctor9.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8929CB261F4D985600C9BE09 /* Doctor9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Doctor9.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8929CB2A1F4D985600C9BE09 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8929CB2C1F4D985600C9BE09 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,8 +55,8 @@
 		8929CB4A1F4D985600C9BE09 /* Doctor9UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Doctor9UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8929CB4E1F4D985600C9BE09 /* Doctor9UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Doctor9UITests.m; sourceTree = "<group>"; };
 		8929CB501F4D985600C9BE09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B4F2365F570FADA3B50415D1 /* libPods-Doctor9.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Doctor9.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC64740B8F0E38D5764DBECD /* Pods-Doctor9.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doctor9.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Doctor9/Pods-Doctor9.debug.xcconfig"; sourceTree = "<group>"; };
+		892C33AF1F4EB00900026DE7 /* welcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcome.png; sourceTree = "<group>"; };
+		8D8185CA71AD9C417E5525B5 /* Pods-Doctor9.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doctor9.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Doctor9/Pods-Doctor9.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8198197C03D9E9A3FFD9D603 /* libPods-Doctor9.a in Frameworks */,
+				19A927DCAF77696AE9DD9234 /* libPods-Doctor9.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,12 +85,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		302B8A3092710615AA60864A /* Frameworks */ = {
+		00B0599FED7D05E43B011E3F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B4F2365F570FADA3B50415D1 /* libPods-Doctor9.a */,
+				6443AF8C9E03FC53D143E594 /* libPods-Doctor9.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7ACB487694448DCC1D11C411 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8D8185CA71AD9C417E5525B5 /* Pods-Doctor9.debug.xcconfig */,
+				22003750A4076C3B1260FCC9 /* Pods-Doctor9.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		8929CB1D1F4D985600C9BE09 = {
@@ -98,8 +109,8 @@
 				8929CB421F4D985600C9BE09 /* Doctor9Tests */,
 				8929CB4D1F4D985600C9BE09 /* Doctor9UITests */,
 				8929CB271F4D985600C9BE09 /* Products */,
-				C55D7F702A426A4904ABAEC5 /* Pods */,
-				302B8A3092710615AA60864A /* Frameworks */,
+				7ACB487694448DCC1D11C411 /* Pods */,
+				00B0599FED7D05E43B011E3F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,10 +131,8 @@
 				8929CB2D1F4D985600C9BE09 /* AppDelegate.m */,
 				8929CB2F1F4D985600C9BE09 /* ViewController.h */,
 				8929CB301F4D985600C9BE09 /* ViewController.m */,
-				8929CB321F4D985600C9BE09 /* Main.storyboard */,
-				8929CB351F4D985600C9BE09 /* Assets.xcassets */,
-				8929CB371F4D985600C9BE09 /* LaunchScreen.storyboard */,
-				8929CB3A1F4D985600C9BE09 /* Info.plist */,
+				892C33AC1F4EAFBD00026DE7 /* Classes */,
+				892C33AD1F4EAFBD00026DE7 /* Resource */,
 				8929CB291F4D985600C9BE09 /* Supporting Files */,
 			);
 			path = Doctor9;
@@ -132,6 +141,10 @@
 		8929CB291F4D985600C9BE09 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8929CB321F4D985600C9BE09 /* Main.storyboard */,
+				8929CB351F4D985600C9BE09 /* Assets.xcassets */,
+				8929CB371F4D985600C9BE09 /* LaunchScreen.storyboard */,
+				8929CB3A1F4D985600C9BE09 /* Info.plist */,
 				8929CB2A1F4D985600C9BE09 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -155,13 +168,27 @@
 			path = Doctor9UITests;
 			sourceTree = "<group>";
 		};
-		C55D7F702A426A4904ABAEC5 /* Pods */ = {
+		892C33AC1F4EAFBD00026DE7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				CC64740B8F0E38D5764DBECD /* Pods-Doctor9.debug.xcconfig */,
-				1F92D793638851F09EC66D5E /* Pods-Doctor9.release.xcconfig */,
 			);
-			name = Pods;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		892C33AD1F4EAFBD00026DE7 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				892C33AE1F4EAFBD00026DE7 /* Picture */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		892C33AE1F4EAFBD00026DE7 /* Picture */ = {
+			isa = PBXGroup;
+			children = (
+				892C33AF1F4EB00900026DE7 /* welcome.png */,
+			);
+			path = Picture;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,12 +198,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8929CB531F4D985600C9BE09 /* Build configuration list for PBXNativeTarget "Doctor9" */;
 			buildPhases = (
-				AFD2D15AF4BF1E6FD12FCE6A /* Check Pods Manifest.lock */,
+				0E19A834212829571D856E6F /* [CP] Check Pods Manifest.lock */,
 				8929CB221F4D985600C9BE09 /* Sources */,
 				8929CB231F4D985600C9BE09 /* Frameworks */,
 				8929CB241F4D985600C9BE09 /* Resources */,
-				5BEF1C24DE8AA9C01A48196A /* Embed Pods Frameworks */,
-				1566802435A6BDF28190D645 /* Copy Pods Resources */,
+				997D831DA3710F1415F95B8C /* [CP] Embed Pods Frameworks */,
+				47CC719597D6459C17C2756A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -274,6 +301,7 @@
 			files = (
 				8929CB391F4D985600C9BE09 /* LaunchScreen.storyboard in Resources */,
 				8929CB361F4D985600C9BE09 /* Assets.xcassets in Resources */,
+				892C33B01F4EB00900026DE7 /* welcome.png in Resources */,
 				8929CB341F4D985600C9BE09 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,49 +323,55 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1566802435A6BDF28190D645 /* Copy Pods Resources */ = {
+		0E19A834212829571D856E6F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Doctor9-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47CC719597D6459C17C2756A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Doctor9/Pods-Doctor9-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Doctor9/Pods-Doctor9-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5BEF1C24DE8AA9C01A48196A /* Embed Pods Frameworks */ = {
+		997D831DA3710F1415F95B8C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Doctor9/Pods-Doctor9-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AFD2D15AF4BF1E6FD12FCE6A /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -488,11 +522,12 @@
 		};
 		8929CB541F4D985600C9BE09 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC64740B8F0E38D5764DBECD /* Pods-Doctor9.debug.xcconfig */;
+			baseConfigurationReference = 8D8185CA71AD9C417E5525B5 /* Pods-Doctor9.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Doctor9/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hgj.Doctor9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -501,11 +536,12 @@
 		};
 		8929CB551F4D985600C9BE09 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F92D793638851F09EC66D5E /* Pods-Doctor9.release.xcconfig */;
+			baseConfigurationReference = 22003750A4076C3B1260FCC9 /* Pods-Doctor9.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Doctor9/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hgj.Doctor9;
 				PRODUCT_NAME = "$(TARGET_NAME)";

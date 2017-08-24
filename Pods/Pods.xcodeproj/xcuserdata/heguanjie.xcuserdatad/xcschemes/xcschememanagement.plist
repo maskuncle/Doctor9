@@ -4,6 +4,21 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MJRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Masonry.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Doctor9.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>65377AC76ED7F6D0B3274F319F61D733</key>
+		<key>04CF549EBEEE7BC87AEAE35397184D94</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E62F31FE4D92645087538C3A61D3FCCD</key>
+		<key>1D8EA5BB46639D8497402F0B173EE460</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>29B65F217397D9F1ABBC5E315A20192D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9DC8D9E02903E93BD0B2FEC9D846EA20</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9E033EDB5EC0819481B0546434FA577B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
