@@ -1,0 +1,21 @@
+//
+//  Doctor9Header.pch
+//  Doctor9
+//
+//  Created by heguanjie on 17/8/24.
+//  Copyright © 2017年 何冠颉. All rights reserved.
+//
+
+#ifndef Doctor9Header_pch
+#define Doctor9Header_pch
+
+#ifdef __OBJC__
+#import "BaseViewController.h"
+#import "AppConfig.h"
+#import "ConfigUtil.h"
+
+#endif
+
+
+
+#endif /* Doctor9Header_pch */

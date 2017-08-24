@@ -1,15 +1,14 @@
 //
-//  ViewController.h
+//  BaseViewController.h
 //  Doctor9
 //
-//  Created by 何冠颉 on 17/8/23.
+//  Created by heguanjie on 17/8/24.
 //  Copyright © 2017年 何冠颉. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface BaseViewController : UIViewController
 
 
 @end
-
