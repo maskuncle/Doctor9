@@ -29,7 +29,6 @@
 @property (nonatomic, strong)   NSString *ADImageUrlNew;
 @property (nonatomic, strong)   NSString *ADLinkUrlNew;
 @property (nonatomic, strong)   NSString *lastImgTagNew;
-
 @property (nonatomic, strong)   NSString *localImagePath;
 @property (nonatomic, assign)   BOOL bParseOld;
 @property (nonatomic, assign)   BOOL isEmpty;
@@ -107,10 +106,16 @@
 -(void)ADImageViewPress{
 //    if ([_ADLinkUrlOld rangeOfString:@"type=app"].location != NSNotFound) {
 //        //跳转到商品详情
+//        
 //    }else{
-        ADWebViewController *view = [[ADWebViewController alloc]initWithNibName:@"ADWebView" bundle:nil];
-        view.url = _ADLinkUrlOld;
-        [self.navigationController pushViewController:view animated:YES];
+    
+        ADWebViewController *vc = [[ADWebViewController alloc] init];
+        if (_ADLinkUrlOld == nil) {
+            vc.url = _ADLinkUrlNew;
+        }else{
+            vc.url = _ADLinkUrlOld;
+        }
+        [self.navigationController pushViewController:vc animated:YES];
 //    }
 }
 
@@ -179,8 +184,8 @@
     } else {
         NSLog(@"An error happened while deserializing the JSON data.");
     }
-//    NSLog(@"_____________ _ADImageUrlNew = %@", _ADImageUrlNew);
-//    NSLog(@"_____________ _ADImageUrlOld = %@", _ADImageUrlOld);
+    NSLog(@"_____________ _ADImageUrlNew = %@", _ADImageUrlNew);
+    NSLog(@"_____________ _ADImageUrlOld = %@", _ADImageUrlOld);
     
     return nil;
 }

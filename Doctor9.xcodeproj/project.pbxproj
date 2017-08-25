@@ -30,6 +30,7 @@
 		8990B0EF1F500BCC0037B01E /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8990B0EE1F500BCC0037B01E /* BaseViewController.m */; };
 		8990B0F21F500BF90037B01E /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8990B0F11F500BF90037B01E /* BaseModel.m */; };
 		8990B0F51F500DC40037B01E /* ShowADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8990B0F41F500DC40037B01E /* ShowADView.m */; };
+		8990B0F81F5018670037B01E /* GJTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8990B0F71F5018670037B01E /* GJTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,8 @@
 		8990B0F11F500BF90037B01E /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		8990B0F31F500DC40037B01E /* ShowADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowADView.h; sourceTree = "<group>"; };
 		8990B0F41F500DC40037B01E /* ShowADView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowADView.m; sourceTree = "<group>"; };
+		8990B0F61F5018670037B01E /* GJTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJTabBarController.h; sourceTree = "<group>"; };
+		8990B0F71F5018670037B01E /* GJTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJTabBarController.m; sourceTree = "<group>"; };
 		8D8185CA71AD9C417E5525B5 /* Pods-Doctor9.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doctor9.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Doctor9/Pods-Doctor9.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -243,6 +246,8 @@
 				892C33D81F4EC04300026DE7 /* SplashViewController.m */,
 				894C25B71F4F075900ABD4EF /* ADWebViewController.h */,
 				894C25B81F4F075900ABD4EF /* ADWebViewController.m */,
+				8990B0F61F5018670037B01E /* GJTabBarController.h */,
+				8990B0F71F5018670037B01E /* GJTabBarController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -515,6 +520,7 @@
 				8990B0F51F500DC40037B01E /* ShowADView.m in Sources */,
 				892C33D91F4EC04300026DE7 /* SplashViewController.m in Sources */,
 				8990B0EB1F4FBF210037B01E /* NetworkRequester+Launch.m in Sources */,
+				8990B0F81F5018670037B01E /* GJTabBarController.m in Sources */,
 				892C33DF1F4EC1BF00026DE7 /* ConfigUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
