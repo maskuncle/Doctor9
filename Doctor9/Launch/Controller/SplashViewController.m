@@ -9,6 +9,7 @@
 #import "SplashViewController.h"
 #import "GuideView.h"
 #import "ADWebViewController.h"
+#import "NetworkRequester+Launch.h"
 
 @interface SplashViewController () <UIScrollViewDelegate,GuideViewDelegate>
 
@@ -28,11 +29,10 @@
 @property (nonatomic, strong)   NSString *ADImageUrlNew;
 @property (nonatomic, strong)   NSString *ADLinkUrlNew;
 @property (nonatomic, strong)   NSString *lastImgTagNew;
+
 @property (nonatomic, strong)   NSString *localImagePath;
 @property (nonatomic, assign)   BOOL bParseOld;
-@property (nonatomic, strong)   NSFileManager *fileManager;
 @property (nonatomic, assign)   BOOL isEmpty;
-@property (nonatomic, assign)   BOOL mBackFromWeb;
 
 @end
 
@@ -51,20 +51,28 @@
             [self.view addSubview:self.guideView];
         }
     }else{
+        [self loadData];
+        
         //判断是否有广告
         if ([self judgeImageExist]) {
+            _ADImageView = [[UIImageView alloc] initWithFrame:self.view.frame];
             [_ADImageView setImage:[UIImage imageWithContentsOfFile:_localImagePath]];
-            [self getSaveData];
-            [self setTime];
-            
+            [self.view addSubview:_ADImageView];
             _ADImageView.userInteractionEnabled = YES;
             UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(ADImageViewPress)];
             [_ADImageView addGestureRecognizer:singleTap];
+            
+            [self.view addSubview:self.skipBtn];
+            
+            [self getSaveData];
+            [self setTime];
+            
         } else {
             [_showADView setHidden:true];
             [self delayMethod:nil];
         }
     }
+    
 }
 
 - (void)delayMethod:(id)sender {
@@ -97,62 +105,84 @@
 }
 
 -(void)ADImageViewPress{
-    _mBackFromWeb = true;
-    if ([_ADLinkUrlOld rangeOfString:@"type=app"].location != NSNotFound) {
-        //跳转到商品详情
-    }else{
+//    if ([_ADLinkUrlOld rangeOfString:@"type=app"].location != NSNotFound) {
+//        //跳转到商品详情
+//    }else{
         ADWebViewController *view = [[ADWebViewController alloc]initWithNibName:@"ADWebView" bundle:nil];
         view.url = _ADLinkUrlOld;
         [self.navigationController pushViewController:view animated:YES];
-    }
+//    }
 }
 
 -(void)loadData{
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//        @try {
-//            CGRect rect = [[UIScreen mainScreen] bounds];
-//            CGSize size = rect.size;
-//            CGFloat scalc_screen = [UIScreen mainScreen].scale;
-//            CGFloat width = size.width * scalc_screen;
-//            CGFloat height = size.width * scalc_screen;
-//            
-//            NSString *str = [WebService getAppStartupAd:width MainSreenH:height];
-//            //NSLog(@"__________ getSaveData str = %@", str);
-//            
-//            [DataCacheManager setCacheString:@"ADIMG" String_:str];
-//            _bParseOld = false;
-//            [self parseADList:str];
-//        }
-//        @catch (NSException *exception) {
-//            NSLog(@"__________ %@", exception);
-//        }
-//        
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            if (_isEmpty) {
-//                NSError *err;
-//                [_fileManager removeItemAtPath:_localImagePath error:&err];
-//            }
-//            
-//            if ([_lastImgTagOld isEqualToString:_lastImgTagNew] || _ADImageUrlNew == nil) {
-//                return;
-//            }
-//            
-//            [self downloadADImage];
-//        });
-//    });
+    CGRect rect = [[UIScreen mainScreen] bounds];
+    CGSize size = rect.size;
+    CGFloat scalc_screen = [UIScreen mainScreen].scale;
+    CGFloat width = size.width * scalc_screen;
+    CGFloat height = size.width * scalc_screen;
+    
+    [NetworkRequester getAppStartupAd:width MainSreenH:height success:^(id responseObject) {
+        NSLog(@"---getAppStartupAd responseObject = %@",responseObject);
+        [ConfigUtil setADimg:responseObject];
+        _bParseOld = false;
+        [self parseADList:responseObject];
+        if (_isEmpty) {
+            NSError *err;
+            NSFileManager *fileManager = [NSFileManager defaultManager];
+            [fileManager removeItemAtPath:_localImagePath error:&err];
+        }
+        if ([_lastImgTagOld isEqualToString:_lastImgTagNew] || _ADImageUrlNew == nil) {
+            return;
+        }
+        [self downloadADImage];
+        
+    } fail:^(NSError *error) {
+        
+    }];
+    
 }
 
 -(void)getSaveData{
-//    NSString *str = [DataCacheManager getCacheString:@"ADIMG"];
-//    if (str != nil) {
-//        _bParseOld = true;
-//        @try {
-//            [self parseADList:str];
-//        }
-//        @catch (NSException *exception) {
-//            NSLog(@"__________ %@", exception);
-//        }
-//    }
+    NSDictionary *dic = [ConfigUtil getADimg];
+    if (dic != nil) {
+        _bParseOld = true;
+        @try {
+            [self parseADList:dic];
+        }
+        @catch (NSException *exception) {
+            NSLog(@"__________ %@", exception);
+        }
+    }
+}
+
+-(NSMutableArray *)parseADList:(id)jsonObject{
+    if ([jsonObject isKindOfClass:[NSArray class]]){
+        NSArray *deserializedArray = (NSArray *)jsonObject;
+        
+        if (0 == [deserializedArray count]) {
+            _isEmpty = true;
+            return nil;
+        }
+        
+        _isEmpty = false;
+        id ob = [deserializedArray objectAtIndex:0];
+        
+        if (_bParseOld) {
+            _ADImageUrlOld = [ob objectForKey:@"img_url"];
+            _lastImgTagOld = [ob objectForKey:@"img_etag"];
+            _ADLinkUrlOld = [ob objectForKey:@"link_url"];
+        }else{
+            _ADImageUrlNew = [ob objectForKey:@"img_url"];
+            _lastImgTagNew = [ob objectForKey:@"img_etag"];
+            _ADLinkUrlNew = [ob objectForKey:@"link_url"];
+        }
+    } else {
+        NSLog(@"An error happened while deserializing the JSON data.");
+    }
+//    NSLog(@"_____________ _ADImageUrlNew = %@", _ADImageUrlNew);
+//    NSLog(@"_____________ _ADImageUrlOld = %@", _ADImageUrlOld);
+    
+    return nil;
 }
 
 -(NSString *)getDownloadImgPath{
@@ -163,63 +193,20 @@
 
 -(BOOL)judgeImageExist{
     _localImagePath = [self getDownloadImgPath];
-    bool ret = [_fileManager fileExistsAtPath:_localImagePath];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    bool ret = [fileManager fileExistsAtPath:_localImagePath];
     return ret;
 }
 
 -(void)downloadADImage{
-    
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//        int bok = 0;
-//        @try {
-//            bok = [WebService down1:_ADImageUrlNew Local_:_localImagePath];
-//        }
-//        @catch (NSException *exception) {
-//            NSLog(@"__________ %@", exception);
-//        }
-//        
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            if (bok != HTTP_GET_SUCCESS){
-//                [OMGToast showWithText:@"下载广告网址失败！" bottomOffset:BOTTOM_OFFSET_15 duration:HINT_SHOW_TIME_2];
-//            }
-//        });
-//    });
-}
-
--(NSMutableArray *)parseADList:(NSString *)jsonData{
-    NSError *error = nil;
-    id jsonObject = [NSJSONSerialization JSONObjectWithData:[jsonData dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingAllowFragments error:&error];
-    
-    if (jsonObject != nil && error == nil){
-        if ([jsonObject isKindOfClass:[NSArray class]]){
-            NSArray *deserializedArray = (NSArray *)jsonObject;
-            
-            if (0 == [deserializedArray count]) {
-                _isEmpty = true;
-                return nil;
-            }
-            
-            _isEmpty = false;
-            id ob = [deserializedArray objectAtIndex:0];
-            
-            if (_bParseOld) {
-                _ADImageUrlOld = [ob objectForKey:@"img_url"];
-                _lastImgTagOld = [ob objectForKey:@"img_etag"];
-                _ADLinkUrlOld = [ob objectForKey:@"link_url"];
-            }else{
-                _ADImageUrlNew = [ob objectForKey:@"img_url"];
-                _lastImgTagNew = [ob objectForKey:@"img_etag"];
-                _ADLinkUrlNew = [ob objectForKey:@"link_url"];
-            }
-        } else {
-            NSLog(@"An error happened while deserializing the JSON data.");
+    [NetworkRequester down:_ADImageUrlNew Local_:_localImagePath completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
+        if (error != nil){
+            NSLog(@"---- 下载广告网址失败！");
+            NSLog(@"--- down error = %@",error);
+        }else{
+            NSLog(@"---- 下载广告网址成功！");
         }
-    }
-    
-    //NSLog(@"_____________ _ADImageUrlNew = %@", _ADImageUrlNew);
-    //NSLog(@"_____________ _ADImageUrlOld = %@", _ADImageUrlOld);
-    
-    return nil;
+    }];
 }
 
 -(void)delayEnter{

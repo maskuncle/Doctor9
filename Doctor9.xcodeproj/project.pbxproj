@@ -16,7 +16,6 @@
 		8929CB441F4D985600C9BE09 /* Doctor9Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8929CB431F4D985600C9BE09 /* Doctor9Tests.m */; };
 		8929CB4F1F4D985600C9BE09 /* Doctor9UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8929CB4E1F4D985600C9BE09 /* Doctor9UITests.m */; };
 		892C33B01F4EB00900026DE7 /* welcome.png in Resources */ = {isa = PBXBuildFile; fileRef = 892C33AF1F4EB00900026DE7 /* welcome.png */; };
-		892C33D01F4EBBC100026DE7 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 892C33CF1F4EBBC100026DE7 /* BaseViewController.m */; };
 		892C33D91F4EC04300026DE7 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 892C33D81F4EC04300026DE7 /* SplashViewController.m */; };
 		892C33DF1F4EC1BF00026DE7 /* ConfigUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 892C33DE1F4EC1BF00026DE7 /* ConfigUtil.m */; };
 		892C33E21F4EC3FA00026DE7 /* GuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 892C33E11F4EC3FA00026DE7 /* GuideView.m */; };
@@ -26,6 +25,11 @@
 		892C33EA1F4EC4BD00026DE7 /* guide4.png in Resources */ = {isa = PBXBuildFile; fileRef = 892C33E61F4EC4BD00026DE7 /* guide4.png */; };
 		892C33ED1F4ED58F00026DE7 /* GJWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 892C33EC1F4ED58F00026DE7 /* GJWebViewProgressView.m */; };
 		894C25B91F4F075900ABD4EF /* ADWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 894C25B81F4F075900ABD4EF /* ADWebViewController.m */; };
+		8990B0E71F4FB7980037B01E /* NetworkRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = 8990B0E61F4FB7980037B01E /* NetworkRequester.m */; };
+		8990B0EB1F4FBF210037B01E /* NetworkRequester+Launch.m in Sources */ = {isa = PBXBuildFile; fileRef = 8990B0EA1F4FBF210037B01E /* NetworkRequester+Launch.m */; };
+		8990B0EF1F500BCC0037B01E /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8990B0EE1F500BCC0037B01E /* BaseViewController.m */; };
+		8990B0F21F500BF90037B01E /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8990B0F11F500BF90037B01E /* BaseModel.m */; };
+		8990B0F51F500DC40037B01E /* ShowADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8990B0F41F500DC40037B01E /* ShowADView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +67,6 @@
 		8929CB4E1F4D985600C9BE09 /* Doctor9UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Doctor9UITests.m; sourceTree = "<group>"; };
 		8929CB501F4D985600C9BE09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		892C33AF1F4EB00900026DE7 /* welcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcome.png; sourceTree = "<group>"; };
-		892C33CE1F4EBBC100026DE7 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		892C33CF1F4EBBC100026DE7 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		892C33D21F4EBD6500026DE7 /* Doctor9Header.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Doctor9Header.pch; sourceTree = "<group>"; };
 		892C33D71F4EC04300026DE7 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
 		892C33D81F4EC04300026DE7 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
@@ -81,6 +83,17 @@
 		892C33EC1F4ED58F00026DE7 /* GJWebViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJWebViewProgressView.m; sourceTree = "<group>"; };
 		894C25B71F4F075900ABD4EF /* ADWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADWebViewController.h; sourceTree = "<group>"; };
 		894C25B81F4F075900ABD4EF /* ADWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADWebViewController.m; sourceTree = "<group>"; };
+		8990B0E51F4FB7980037B01E /* NetworkRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkRequester.h; sourceTree = "<group>"; };
+		8990B0E61F4FB7980037B01E /* NetworkRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkRequester.m; sourceTree = "<group>"; };
+		8990B0E81F4FB86D0037B01E /* NetworkCongfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkCongfig.h; sourceTree = "<group>"; };
+		8990B0E91F4FBF210037B01E /* NetworkRequester+Launch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NetworkRequester+Launch.h"; sourceTree = "<group>"; };
+		8990B0EA1F4FBF210037B01E /* NetworkRequester+Launch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NetworkRequester+Launch.m"; sourceTree = "<group>"; };
+		8990B0ED1F500BCC0037B01E /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		8990B0EE1F500BCC0037B01E /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		8990B0F01F500BF90037B01E /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		8990B0F11F500BF90037B01E /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		8990B0F31F500DC40037B01E /* ShowADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowADView.h; sourceTree = "<group>"; };
+		8990B0F41F500DC40037B01E /* ShowADView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowADView.m; sourceTree = "<group>"; };
 		8D8185CA71AD9C417E5525B5 /* Pods-Doctor9.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doctor9.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Doctor9/Pods-Doctor9.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,7 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				892C33DA1F4EC0CF00026DE7 /* Public */,
-				892C33B51F4EBB2300026DE7 /* Base */,
 				892C33D31F4EC01D00026DE7 /* Launch */,
 				892C33AD1F4EAFBD00026DE7 /* Resource */,
 				8929CB291F4D985600C9BE09 /* Supporting Files */,
@@ -214,15 +226,6 @@
 			path = Picture;
 			sourceTree = "<group>";
 		};
-		892C33B51F4EBB2300026DE7 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				892C33CE1F4EBBC100026DE7 /* BaseViewController.h */,
-				892C33CF1F4EBBC100026DE7 /* BaseViewController.m */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
 		892C33D31F4EC01D00026DE7 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +261,8 @@
 				892C33E11F4EC3FA00026DE7 /* GuideView.m */,
 				892C33EB1F4ED58F00026DE7 /* GJWebViewProgressView.h */,
 				892C33EC1F4ED58F00026DE7 /* GJWebViewProgressView.m */,
+				8990B0F31F500DC40037B01E /* ShowADView.h */,
+				8990B0F41F500DC40037B01E /* ShowADView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -265,6 +270,8 @@
 		892C33DA1F4EC0CF00026DE7 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				8990B0EC1F500BCC0037B01E /* Base */,
+				8990B0E41F4FB6FD0037B01E /* Network */,
 				892C33DB1F4EC0CF00026DE7 /* Config */,
 			);
 			path = Public;
@@ -278,6 +285,29 @@
 				892C33DE1F4EC1BF00026DE7 /* ConfigUtil.m */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		8990B0E41F4FB6FD0037B01E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8990B0E81F4FB86D0037B01E /* NetworkCongfig.h */,
+				8990B0E51F4FB7980037B01E /* NetworkRequester.h */,
+				8990B0E61F4FB7980037B01E /* NetworkRequester.m */,
+				8990B0E91F4FBF210037B01E /* NetworkRequester+Launch.h */,
+				8990B0EA1F4FBF210037B01E /* NetworkRequester+Launch.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		8990B0EC1F500BCC0037B01E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8990B0ED1F500BCC0037B01E /* BaseViewController.h */,
+				8990B0EE1F500BCC0037B01E /* BaseViewController.m */,
+				8990B0F01F500BF90037B01E /* BaseModel.h */,
+				8990B0F11F500BF90037B01E /* BaseModel.m */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -475,12 +505,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8929CB2E1F4D985600C9BE09 /* AppDelegate.m in Sources */,
+				8990B0EF1F500BCC0037B01E /* BaseViewController.m in Sources */,
 				892C33ED1F4ED58F00026DE7 /* GJWebViewProgressView.m in Sources */,
+				8990B0F21F500BF90037B01E /* BaseModel.m in Sources */,
 				894C25B91F4F075900ABD4EF /* ADWebViewController.m in Sources */,
-				892C33D01F4EBBC100026DE7 /* BaseViewController.m in Sources */,
+				8990B0E71F4FB7980037B01E /* NetworkRequester.m in Sources */,
 				8929CB2B1F4D985600C9BE09 /* main.m in Sources */,
 				892C33E21F4EC3FA00026DE7 /* GuideView.m in Sources */,
+				8990B0F51F500DC40037B01E /* ShowADView.m in Sources */,
 				892C33D91F4EC04300026DE7 /* SplashViewController.m in Sources */,
+				8990B0EB1F4FBF210037B01E /* NetworkRequester+Launch.m in Sources */,
 				892C33DF1F4EC1BF00026DE7 /* ConfigUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

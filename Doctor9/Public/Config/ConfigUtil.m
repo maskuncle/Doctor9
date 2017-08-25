@@ -11,6 +11,10 @@
 @implementation ConfigUtil
 
 #pragma mark - MachineInfo
++ (NSString*)getAppChannel {
+    return @"acupoint";
+}
+
 + (NSString*)getSysVerison {
     return [[UIDevice currentDevice] systemVersion];
 }
@@ -21,6 +25,11 @@
 
 + (NSString*)getAppBuild {
     return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+}
+
++ (NSString*)getAppleDeviceID {
+    NSString *uuid = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+    return [NSString stringWithFormat:@"I:%@", uuid];
 }
 
 #pragma mark - get some obj
@@ -44,7 +53,7 @@
     if(![filemanager fileExistsAtPath:DocumentDir isDirectory:&isDirectory]){
         [filemanager createDirectoryAtPath:DocumentDir withIntermediateDirectories:YES attributes:nil error:nil];
     }
-    //NSLog(@"----canheDirBase = %@",canheDirBase);
+    NSLog(@"----canheDirBase = %@",DocumentDir);
     return DocumentDir;
 }
 
@@ -57,6 +66,17 @@
 + (void)setVersion:(NSString *)version {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setObject:version forKey:VERSION_INFO_KEY];
+    [userDefaults synchronize];
+}
+
++ (id)getADimg {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    return [userDefaults stringForKey:VERSION_INFO_KEY];
+}
+
++ (void)setADimg:(id)ADimg {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:ADimg forKey:ADIMG_DATE_STR];
     [userDefaults synchronize];
 }
 
