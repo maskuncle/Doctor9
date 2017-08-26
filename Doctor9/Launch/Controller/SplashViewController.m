@@ -10,6 +10,7 @@
 #import "GuideView.h"
 #import "ADWebViewController.h"
 #import "NetworkRequester+Launch.h"
+#import "GJTabBarController.h"
 
 @interface SplashViewController () <UIScrollViewDelegate,GuideViewDelegate>
 
@@ -74,16 +75,19 @@
     
 }
 
+-(void)dealloc{
+    NSLog(@"--- dealloc SplashVC");
+}
+
 - (void)delayMethod:(id)sender {
-    UIViewController *topVc = [self.navigationController topViewController];
-    if ([topVc isKindOfClass:[SplashViewController class]]) {
-        [self.navigationController popViewControllerAnimated:NO];
-        [self performSegueWithIdentifier:@"to_tabbar" sender:self];
+    if ([[PubFunc getCurrentVC] isKindOfClass:[SplashViewController class]]) {
+        GJTabBarController *tabBarController = [[GJTabBarController alloc] init];
+        tabBarController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        [self presentViewController:tabBarController animated:YES completion:^{}];
     }
 }
 
-- (void)setTime
-{
+- (void)setTime{
     _timer= [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timeChange:) userInfo:nil repeats:YES];
     
 }
@@ -115,7 +119,8 @@
         }else{
             vc.url = _ADLinkUrlOld;
         }
-        [self.navigationController pushViewController:vc animated:YES];
+        vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        [self presentViewController:vc animated:YES completion:^{}];
 //    }
 }
 
@@ -208,8 +213,6 @@
         if (error != nil){
             NSLog(@"---- 下载广告网址失败！");
             NSLog(@"--- down error = %@",error);
-        }else{
-            NSLog(@"---- 下载广告网址成功！");
         }
     }];
 }
@@ -251,6 +254,7 @@
 
 - (void)skipBtnClick:(id)sender {
     [self.timer invalidate];
+    self.timer = nil;
     [self delayMethod:nil];
 }
 

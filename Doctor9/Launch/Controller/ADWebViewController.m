@@ -33,7 +33,51 @@
     _webProgressView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     [self.view addSubview:_webProgressView];
     
+    [self addObservers];
 }
+
+- (void)addObservers {
+    [_webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:NULL];
+    [_webView addObserver:self forKeyPath:@"title" options:NSKeyValueObservingOptionNew context:NULL];
+    [_webView.scrollView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
+}
+
+- (void)dealloc {
+    [_webView removeObserver:self forKeyPath:@"estimatedProgress"];
+    [_webView removeObserver:self forKeyPath:@"title"];
+    [_webView.scrollView removeObserver:self forKeyPath:@"contentSize"];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"estimatedProgress"]) {
+        if (object == self.webView) {
+            [self.webProgressView setProgress:self.webView.estimatedProgress animated:YES];
+        }else {
+            [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+        }
+        
+    }
+    else if ([keyPath isEqualToString:@"title"]) {
+        if (object == self.webView) {
+            self.title = self.webView.title;
+        }
+        else{
+            [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+        }
+    }
+    else if ([keyPath isEqualToString:@"contentSize"]){
+        if (object == self.webView.scrollView) {
+//                  self.scrollView.contentSize = self.webView.scrollView.contentSize;
+        }else {
+            [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+        }
+    }
+    else {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
+    
+}
+
 #pragma mark - WebView Delegate
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
     [self.webProgressView setProgress:0 animated:YES];

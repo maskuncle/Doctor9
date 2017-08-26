@@ -25,6 +25,7 @@
 		892C33EA1F4EC4BD00026DE7 /* guide4.png in Resources */ = {isa = PBXBuildFile; fileRef = 892C33E61F4EC4BD00026DE7 /* guide4.png */; };
 		892C33ED1F4ED58F00026DE7 /* GJWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 892C33EC1F4ED58F00026DE7 /* GJWebViewProgressView.m */; };
 		894C25B91F4F075900ABD4EF /* ADWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 894C25B81F4F075900ABD4EF /* ADWebViewController.m */; };
+		898E02BE1F510CEE0064F55B /* PubFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 898E02BD1F510CEE0064F55B /* PubFunc.m */; };
 		8990B0E71F4FB7980037B01E /* NetworkRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = 8990B0E61F4FB7980037B01E /* NetworkRequester.m */; };
 		8990B0EB1F4FBF210037B01E /* NetworkRequester+Launch.m in Sources */ = {isa = PBXBuildFile; fileRef = 8990B0EA1F4FBF210037B01E /* NetworkRequester+Launch.m */; };
 		8990B0EF1F500BCC0037B01E /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8990B0EE1F500BCC0037B01E /* BaseViewController.m */; };
@@ -84,6 +85,8 @@
 		892C33EC1F4ED58F00026DE7 /* GJWebViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJWebViewProgressView.m; sourceTree = "<group>"; };
 		894C25B71F4F075900ABD4EF /* ADWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADWebViewController.h; sourceTree = "<group>"; };
 		894C25B81F4F075900ABD4EF /* ADWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADWebViewController.m; sourceTree = "<group>"; };
+		898E02BC1F510CEE0064F55B /* PubFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PubFunc.h; sourceTree = "<group>"; };
+		898E02BD1F510CEE0064F55B /* PubFunc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PubFunc.m; sourceTree = "<group>"; };
 		8990B0E51F4FB7980037B01E /* NetworkRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkRequester.h; sourceTree = "<group>"; };
 		8990B0E61F4FB7980037B01E /* NetworkRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkRequester.m; sourceTree = "<group>"; };
 		8990B0E81F4FB86D0037B01E /* NetworkCongfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkCongfig.h; sourceTree = "<group>"; };
@@ -288,6 +291,8 @@
 				892C33DC1F4EC11500026DE7 /* AppConfig.h */,
 				892C33DD1F4EC1BF00026DE7 /* ConfigUtil.h */,
 				892C33DE1F4EC1BF00026DE7 /* ConfigUtil.m */,
+				898E02BC1F510CEE0064F55B /* PubFunc.h */,
+				898E02BD1F510CEE0064F55B /* PubFunc.m */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -520,6 +525,7 @@
 				8990B0F51F500DC40037B01E /* ShowADView.m in Sources */,
 				892C33D91F4EC04300026DE7 /* SplashViewController.m in Sources */,
 				8990B0EB1F4FBF210037B01E /* NetworkRequester+Launch.m in Sources */,
+				898E02BE1F510CEE0064F55B /* PubFunc.m in Sources */,
 				8990B0F81F5018670037B01E /* GJTabBarController.m in Sources */,
 				892C33DF1F4EC1BF00026DE7 /* ConfigUtil.m in Sources */,
 			);
