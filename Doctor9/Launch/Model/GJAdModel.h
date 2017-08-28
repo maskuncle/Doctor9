@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) NSString *img_url;
 @property (nonatomic, strong) NSString *link_url;
+
 @property (nonatomic, strong) NSString *img_etag;
 @property (nonatomic, strong) NSString *title;
 

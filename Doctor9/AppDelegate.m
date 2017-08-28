@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "SplashViewController.h"
 #import "GJTabBarController.h"
+#import "GJLaunchViewManager.h"
 
 @interface AppDelegate ()
 
@@ -16,16 +16,26 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    
+    [self addMainWindow];
+    [self addADLaunchController];
+    return YES;
+}
+
+- (void)addMainWindow{
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [[SplashViewController alloc] init];
+    self.window.rootViewController = [[GJTabBarController alloc] init];
     [self.window makeKeyAndVisible];
-    
-    return YES;
+}
+
+- (void)addADLaunchController{
+    UIViewController *rootViewController = self.window.rootViewController;
+    GJLaunchViewManager *launchController = [GJLaunchViewManager launchViewManger];
+    [launchController showView:rootViewController.view];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

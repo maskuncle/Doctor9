@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "GJAdModel.h"
+#import "GuideView.h"
+#import "ShowADView.h"
+#import "ADWebViewController.h"
+#import "NetworkRequester+Launch.h"
+#import "GJTabBarController.h"
 
 @interface GJLaunchViewManager : UIView
 /** 广告模型*/

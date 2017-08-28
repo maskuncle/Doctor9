@@ -7,7 +7,7 @@
 //
 
 //倒计时
-#define SkipBtnTime 3
+#define SkipBtnTime 5
 //跳过按钮宽
 #define SkipBtnWidth 65
 //跳过按钮高

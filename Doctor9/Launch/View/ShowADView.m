@@ -35,6 +35,7 @@
         
         //倒计时
         _timer= [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timeChange:) userInfo:nil repeats:YES];
+        [_timer fire];
     }
     return self;
 }
@@ -62,6 +63,7 @@
     [self.skipBtn setTitle:str forState:UIControlStateNormal];
     if (i <= 0) {
         [_timer invalidate];
+        _timer = nil;
         if ([self.delegate respondsToSelector:@selector(onSkipButtonPressed:)]) {
             [self.delegate onSkipButtonPressed:nil];
         }

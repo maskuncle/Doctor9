@@ -16,7 +16,6 @@
 		8929CB441F4D985600C9BE09 /* Doctor9Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8929CB431F4D985600C9BE09 /* Doctor9Tests.m */; };
 		8929CB4F1F4D985600C9BE09 /* Doctor9UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8929CB4E1F4D985600C9BE09 /* Doctor9UITests.m */; };
 		892C33B01F4EB00900026DE7 /* welcome.png in Resources */ = {isa = PBXBuildFile; fileRef = 892C33AF1F4EB00900026DE7 /* welcome.png */; };
-		892C33D91F4EC04300026DE7 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 892C33D81F4EC04300026DE7 /* SplashViewController.m */; };
 		892C33DF1F4EC1BF00026DE7 /* ConfigUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 892C33DE1F4EC1BF00026DE7 /* ConfigUtil.m */; };
 		892C33E21F4EC3FA00026DE7 /* GuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 892C33E11F4EC3FA00026DE7 /* GuideView.m */; };
 		892C33E71F4EC4BD00026DE7 /* guide1.png in Resources */ = {isa = PBXBuildFile; fileRef = 892C33E31F4EC4BD00026DE7 /* guide1.png */; };
@@ -72,8 +71,6 @@
 		8929CB501F4D985600C9BE09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		892C33AF1F4EB00900026DE7 /* welcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcome.png; sourceTree = "<group>"; };
 		892C33D21F4EBD6500026DE7 /* Doctor9Header.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Doctor9Header.pch; sourceTree = "<group>"; };
-		892C33D71F4EC04300026DE7 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
-		892C33D81F4EC04300026DE7 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
 		892C33DC1F4EC11500026DE7 /* AppConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfig.h; sourceTree = "<group>"; };
 		892C33DD1F4EC1BF00026DE7 /* ConfigUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigUtil.h; sourceTree = "<group>"; };
 		892C33DE1F4EC1BF00026DE7 /* ConfigUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigUtil.m; sourceTree = "<group>"; };
@@ -251,8 +248,6 @@
 		892C33D41F4EC01D00026DE7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				892C33D71F4EC04300026DE7 /* SplashViewController.h */,
-				892C33D81F4EC04300026DE7 /* SplashViewController.m */,
 				894C25B71F4F075900ABD4EF /* ADWebViewController.h */,
 				894C25B81F4F075900ABD4EF /* ADWebViewController.m */,
 				8990B0F61F5018670037B01E /* GJTabBarController.h */,
@@ -534,7 +529,6 @@
 				8929CB2B1F4D985600C9BE09 /* main.m in Sources */,
 				892C33E21F4EC3FA00026DE7 /* GuideView.m in Sources */,
 				8990B0F51F500DC40037B01E /* ShowADView.m in Sources */,
-				892C33D91F4EC04300026DE7 /* SplashViewController.m in Sources */,
 				8990B0EB1F4FBF210037B01E /* NetworkRequester+Launch.m in Sources */,
 				898E02BE1F510CEE0064F55B /* PubFunc.m in Sources */,
 				89DD72E41F53B3E100E4117B /* GJAdModel.m in Sources */,
