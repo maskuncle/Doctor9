@@ -66,7 +66,7 @@
 - (void)setProgress:(float)progress animated:(BOOL)animated {
     _progress = progress;
     
-    NSLog(@"progress %f", progress);
+//    NSLog(@"progress %f", progress);
     
     if (progress == 0) {
         [UIView animateWithDuration:animated ? DEFAULT_DURATION : 0.0 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{

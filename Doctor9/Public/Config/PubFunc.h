@@ -11,5 +11,10 @@
 @interface PubFunc : NSObject
 /*!获取当前控制器*/
 + (UIViewController *)getCurrentVC;
+//为空判断
++ (BOOL)isEmpty:(NSString *)str;
++ (BOOL)isEmptyWithDic:(NSDictionary *)dic;
++ (BOOL)isEmpty_id:(id)obj;
+
 
 @end

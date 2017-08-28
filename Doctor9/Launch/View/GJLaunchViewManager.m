@@ -7,25 +7,20 @@
 //
 
 #import "GJLaunchViewManager.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface GJLaunchViewManager () <GuideViewDelegate,ShowADViewDelegate>
 @property (nonatomic, strong) GuideView *guideView;
 @property (nonatomic, strong) ShowADView *showADView;
 
-//可做广告的Model
-@property (nonatomic, strong)   NSString *ADImageUrlOld;
-@property (nonatomic, strong)   NSString *ADLinkUrlOld;
-@property (nonatomic, strong)   NSString *lastImgTagOld;
-@property (nonatomic, strong)   NSString *ADImageUrlNew;
-@property (nonatomic, strong)   NSString *ADLinkUrlNew;
-@property (nonatomic, strong)   NSString *lastImgTagNew;
-@property (nonatomic, strong)   NSString *localImagePath;
+@property (nonatomic, strong)   NSString *localImagePath;   //图片下载至本地的地址
 
 @property (nonatomic, assign)   BOOL bParseOld;
-@property (nonatomic, assign)   BOOL isEmpty;
+@property (nonatomic, strong)   GJAdModel *adModelOld;
 @end
 
 @implementation GJLaunchViewManager
+
 +(instancetype)launchViewManger
 {
     return [[[ self class]alloc]init];
@@ -36,6 +31,7 @@
     self.frame=view.bounds;
     [view addSubview:self];
     [self judgeShowAndLoad];
+    [self loadData];
 }
 
 - (void)judgeShowAndLoad{
@@ -48,23 +44,24 @@
             [self addSubview:self.guideView];
         }
     }else{
-        [self loadData];
-        
         //判断是否有广告
         if ([self judgeImageExist]) {
             self.showADView = [[ShowADView alloc] initWithFrame:self.bounds];
-            [self.showADView.ADImageView setImage:[UIImage imageWithContentsOfFile:_localImagePath]];
             self.showADView.delegate = self;
             [self addSubview:self.showADView];
-            
-            NSDictionary *dic = [ConfigUtil getADimg];
-            if (dic != nil) {
-                _bParseOld = true;
-                @try {
-                    [self parseADList:dic];
-                }
-                @catch (NSException *exception) {
-                    NSLog(@"__________ %@", exception);
+            if (![PubFunc isEmpty:_adModel.img_url]) {
+                [self.showADView.ADImageView sd_setImageWithURL:[NSURL URLWithString:_adModel.img_url] placeholderImage:nil];
+            }else{
+                [self.showADView.ADImageView setImage:[UIImage imageWithContentsOfFile:self.localImagePath]];
+                NSDictionary *dic = [ConfigUtil getADimg];
+                if (dic != nil) {
+                    _bParseOld = true;
+                    @try {
+                        [self parseADList:dic];
+                    }
+                    @catch (NSException *exception) {
+                        NSLog(@"__________ %@", exception);
+                    }
                 }
             }
             
@@ -76,25 +73,7 @@
 
 }
 
-- (void)cancleNSTimer{
-    if (self.showADView.timer) {
-        [self.showADView.timer invalidate];
-        self.showADView.timer = nil;
-    }
-}
-
-- (void)dismissController {
-    [self cancleNSTimer];
-    //消失动画
-    [UIView animateWithDuration:0.0 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-        //缩放修改处
-        self.transform = CGAffineTransformMakeScale(1, 1);
-        self.alpha = 0.0;
-    } completion:^(BOOL finished) {
-        [self removeFromSuperview];
-    }];
-}
-
+//从灸大夫服务器上取下来的广告数据Model
 -(void)loadData{
     CGRect rect = [[UIScreen mainScreen] bounds];
     CGSize size = rect.size;
@@ -106,13 +85,12 @@
         NSLog(@"---getAppStartupAd responseObject = %@",responseObject);
         [ConfigUtil setADimg:responseObject];
         _bParseOld = false;
-        [self parseADList:responseObject];
-        if (_isEmpty) {
+        if ([self parseADList:responseObject]) {
             NSError *err;
             NSFileManager *fileManager = [NSFileManager defaultManager];
-            [fileManager removeItemAtPath:_localImagePath error:&err];
+            [fileManager removeItemAtPath:self.localImagePath error:&err];
         }
-        if ([_lastImgTagOld isEqualToString:_lastImgTagNew] || _ADImageUrlNew == nil) {
+        if ([_adModelOld.img_etag isEqualToString:_adModel.img_etag] || _adModel.img_url == nil) {
             return;
         }
         [self downloadADImage];
@@ -123,47 +101,52 @@
     
 }
 
--(NSMutableArray *)parseADList:(id)jsonObject{
+- (BOOL)parseADList:(id)jsonObject{
     if ([jsonObject isKindOfClass:[NSArray class]]){
         NSArray *deserializedArray = (NSArray *)jsonObject;
-        
         if (0 == [deserializedArray count]) {
-            _isEmpty = true;
-            return nil;
+            return true;
         }
-        
-        _isEmpty = false;
         id ob = [deserializedArray objectAtIndex:0];
         
         if (_bParseOld) {
-            _ADImageUrlOld = [ob objectForKey:@"img_url"];
-            _lastImgTagOld = [ob objectForKey:@"img_etag"];
-            _ADLinkUrlOld = [ob objectForKey:@"link_url"];
-        }else{
-            _ADImageUrlNew = [ob objectForKey:@"img_url"];
-            _lastImgTagNew = [ob objectForKey:@"img_etag"];
-            _ADLinkUrlNew = [ob objectForKey:@"link_url"];
+            _adModelOld = [[GJAdModel alloc] init];
+            _adModelOld.img_url = [ob objectForKey:@"img_url"];
+            _adModelOld.img_etag = [ob objectForKey:@"img_etag"];
+            _adModelOld.link_url = [ob objectForKey:@"link_url"];
+            
+        }else if(_adModel == nil){
+            _adModel = [[GJAdModel alloc] init];
+            _adModel.img_url = [ob objectForKey:@"img_url"];
+            _adModel.img_etag = [ob objectForKey:@"img_etag"];
+            _adModel.link_url = [ob objectForKey:@"link_url"];
         }
     } else {
         NSLog(@"An error happened while deserializing the JSON data.");
     }
-    NSLog(@"_____________ _ADImageUrlNew = %@", _ADImageUrlNew);
-    NSLog(@"_____________ _ADImageUrlOld = %@", _ADImageUrlOld);
+//    NSLog(@"_____________ _ADImageUrlNew = %@", _ADImageUrlNew);
+//    NSLog(@"_____________ _ADImageUrlOld = %@", _ADImageUrlOld);
     
-    return nil;
+    return false;
 }
 
 -(BOOL)judgeImageExist{
-    NSMutableString *sb = [NSMutableString stringWithString:[ConfigUtil getMyDataPath]];
-    [sb appendString:@"/ADImage.jpg"];
-    _localImagePath = sb;
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    bool ret = [fileManager fileExistsAtPath:_localImagePath];
+    bool ret = [fileManager fileExistsAtPath:self.localImagePath];
     return ret;
 }
 
+-(NSString *)localImagePath{
+    if (_localImagePath == nil) {
+        NSMutableString *sb = [NSMutableString stringWithString:[ConfigUtil getMyDataPath]];
+        [sb appendString:@"/ADImage.jpg"];
+        _localImagePath = sb;
+    }
+    return _localImagePath;
+}
+
 -(void)downloadADImage{
-    [NetworkRequester down:_ADImageUrlNew Local_:_localImagePath completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
+    [NetworkRequester down:_adModel.img_url Local_:self.localImagePath completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
         if (error != nil){
             NSLog(@"---- 下载广告网址失败！");
             NSLog(@"--- down error = %@",error);
@@ -186,6 +169,25 @@
     return NO;
 }
 
+- (void)cancleNSTimer{
+    if (self.showADView.timer) {
+        [self.showADView.timer invalidate];
+        self.showADView.timer = nil;
+    }
+}
+
+- (void)dismissController {
+    [self cancleNSTimer];
+    //消失动画
+    [UIView animateWithDuration:0.0 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        //缩放修改处
+        self.transform = CGAffineTransformMakeScale(1, 1);
+        self.alpha = 0.0;
+    } completion:^(BOOL finished) {
+        [self removeFromSuperview];
+    }];
+}
+
 #pragma mark - GuideViewDelegate
 //点击‘开始体验’
 -(void)onDoneButtonPressed{
@@ -202,10 +204,10 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         [self removeFromSuperview];
         ADWebViewController *adVc = [[ADWebViewController alloc] init];
-        if (_ADLinkUrlOld == nil) {
-            adVc.url = _ADLinkUrlNew;
+        if ([PubFunc isEmpty:_adModelOld.link_url]) {
+            adVc.url = _adModel.link_url;
         }else{
-            adVc.url = _ADLinkUrlOld;
+            adVc.url = _adModelOld.link_url;
         }
         adVc.hidesBottomBarWhenPushed=YES;
         [[UIApplication sharedApplication].keyWindow.rootViewController.childViewControllers[0] pushViewController:adVc animated:YES];

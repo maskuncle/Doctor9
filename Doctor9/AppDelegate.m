@@ -33,8 +33,12 @@
 }
 
 - (void)addADLaunchController{
+    GJAdModel * adModel=[[GJAdModel alloc]init];
+    adModel.img_url=@"http://d.hiphotos.baidu.com/image/pic/item/f7246b600c3387444834846f580fd9f9d72aa034.jpg";
+    adModel.link_url=@"http://www.sina.com";
     UIViewController *rootViewController = self.window.rootViewController;
     GJLaunchViewManager *launchController = [GJLaunchViewManager launchViewManger];
+    launchController.adModel = adModel;
     [launchController showView:rootViewController.view];
 }
 
