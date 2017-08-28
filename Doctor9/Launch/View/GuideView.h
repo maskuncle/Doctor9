@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 @protocol GuideViewDelegate <NSObject>
 @optional
+//点击‘开始体验’
 -(void)onDoneButtonPressed;
 
 @end

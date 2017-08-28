@@ -26,7 +26,7 @@
         _skipBtn.frame = CGRectMake(CGRectGetWidth(frame) - SkipBtnWidth - SkipRightEdging, SkipTopEdging, SkipBtnWidth, SkipBtnHeight);
         [_skipBtn addTarget:self action:@selector(SkipButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
         _skipBtn.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
-        [_skipBtn setTitle:@"跳过" forState:UIControlStateNormal];
+        [_skipBtn setTitle:[NSString stringWithFormat:@" 跳过  %ds",SkipBtnTime] forState:UIControlStateNormal];
         _skipBtn.titleLabel.textColor = [UIColor whiteColor];
         _skipBtn.titleLabel.font = [UIFont systemFontOfSize:15];
         _skipBtn.alpha = 0.92;
@@ -46,6 +46,8 @@
 }
 
 -(void)SkipButtonPressed:(id)sender{
+    [self.timer invalidate];
+    self.timer = nil;
     if ([self.delegate respondsToSelector:@selector(onSkipButtonPressed:)]) {
         [self.delegate onSkipButtonPressed:sender];
     }
@@ -56,9 +58,8 @@
     if (i < 0) {
         i = 0;
     }
-    NSString *str = [NSString stringWithFormat:@" 跳过 %ds ",i ];
+    NSString *str = [NSString stringWithFormat:@" 跳过  %ds",i ];
     [self.skipBtn setTitle:str forState:UIControlStateNormal];
-    [self.skipBtn.titleLabel setFont:[UIFont systemFontOfSize:18]];
     if (i <= 0) {
         [_timer invalidate];
         if ([self.delegate respondsToSelector:@selector(onSkipButtonPressed:)]) {

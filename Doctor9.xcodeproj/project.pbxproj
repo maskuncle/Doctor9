@@ -32,6 +32,8 @@
 		8990B0F21F500BF90037B01E /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8990B0F11F500BF90037B01E /* BaseModel.m */; };
 		8990B0F51F500DC40037B01E /* ShowADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8990B0F41F500DC40037B01E /* ShowADView.m */; };
 		8990B0F81F5018670037B01E /* GJTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8990B0F71F5018670037B01E /* GJTabBarController.m */; };
+		89DD72E11F53B3BF00E4117B /* GJLaunchViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DD72E01F53B3BF00E4117B /* GJLaunchViewManager.m */; };
+		89DD72E41F53B3E100E4117B /* GJAdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DD72E31F53B3E100E4117B /* GJAdModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,10 @@
 		8990B0F41F500DC40037B01E /* ShowADView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowADView.m; sourceTree = "<group>"; };
 		8990B0F61F5018670037B01E /* GJTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJTabBarController.h; sourceTree = "<group>"; };
 		8990B0F71F5018670037B01E /* GJTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJTabBarController.m; sourceTree = "<group>"; };
+		89DD72DF1F53B3BF00E4117B /* GJLaunchViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJLaunchViewManager.h; sourceTree = "<group>"; };
+		89DD72E01F53B3BF00E4117B /* GJLaunchViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJLaunchViewManager.m; sourceTree = "<group>"; };
+		89DD72E21F53B3E100E4117B /* GJAdModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJAdModel.h; sourceTree = "<group>"; };
+		89DD72E31F53B3E100E4117B /* GJAdModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJAdModel.m; sourceTree = "<group>"; };
 		8D8185CA71AD9C417E5525B5 /* Pods-Doctor9.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doctor9.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Doctor9/Pods-Doctor9.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -258,6 +264,8 @@
 		892C33D51F4EC01D00026DE7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				89DD72E21F53B3E100E4117B /* GJAdModel.h */,
+				89DD72E31F53B3E100E4117B /* GJAdModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -271,6 +279,8 @@
 				892C33EC1F4ED58F00026DE7 /* GJWebViewProgressView.m */,
 				8990B0F31F500DC40037B01E /* ShowADView.h */,
 				8990B0F41F500DC40037B01E /* ShowADView.m */,
+				89DD72DF1F53B3BF00E4117B /* GJLaunchViewManager.h */,
+				89DD72E01F53B3BF00E4117B /* GJLaunchViewManager.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -517,6 +527,7 @@
 				8929CB2E1F4D985600C9BE09 /* AppDelegate.m in Sources */,
 				8990B0EF1F500BCC0037B01E /* BaseViewController.m in Sources */,
 				892C33ED1F4ED58F00026DE7 /* GJWebViewProgressView.m in Sources */,
+				89DD72E11F53B3BF00E4117B /* GJLaunchViewManager.m in Sources */,
 				8990B0F21F500BF90037B01E /* BaseModel.m in Sources */,
 				894C25B91F4F075900ABD4EF /* ADWebViewController.m in Sources */,
 				8990B0E71F4FB7980037B01E /* NetworkRequester.m in Sources */,
@@ -526,6 +537,7 @@
 				892C33D91F4EC04300026DE7 /* SplashViewController.m in Sources */,
 				8990B0EB1F4FBF210037B01E /* NetworkRequester+Launch.m in Sources */,
 				898E02BE1F510CEE0064F55B /* PubFunc.m in Sources */,
+				89DD72E41F53B3E100E4117B /* GJAdModel.m in Sources */,
 				8990B0F81F5018670037B01E /* GJTabBarController.m in Sources */,
 				892C33DF1F4EC1BF00026DE7 /* ConfigUtil.m in Sources */,
 			);

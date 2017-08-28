@@ -8,20 +8,15 @@
 
 #import "SplashViewController.h"
 #import "GuideView.h"
+#import "ShowADView.h"
 #import "ADWebViewController.h"
 #import "NetworkRequester+Launch.h"
 #import "GJTabBarController.h"
 
-@interface SplashViewController () <UIScrollViewDelegate,GuideViewDelegate>
+@interface SplashViewController () <UIScrollViewDelegate,GuideViewDelegate,ShowADViewDelegate>
 
 @property (nonatomic, strong)   GuideView *guideView;
-
-//可提取出做单例的View
-@property (nonatomic, strong)   UIView *showADView;
-@property (nonatomic, strong)   UIImageView *ADImageView;
-@property (nonatomic, strong)   NSTimer *timer;
-@property (nonatomic, strong)   UIButton *skipBtn;
-@property (strong, nonatomic)   UIPageControl *pageControl;
+@property (nonatomic, strong)   ShowADView *showADView;
 
 //可做广告的Model
 @property (nonatomic, strong)   NSString *ADImageUrlOld;
@@ -55,17 +50,21 @@
         
         //判断是否有广告
         if ([self judgeImageExist]) {
-            _ADImageView = [[UIImageView alloc] initWithFrame:self.view.frame];
-            [_ADImageView setImage:[UIImage imageWithContentsOfFile:_localImagePath]];
-            [self.view addSubview:_ADImageView];
-            _ADImageView.userInteractionEnabled = YES;
-            UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(ADImageViewPress)];
-            [_ADImageView addGestureRecognizer:singleTap];
+            self.showADView = [[ShowADView alloc] initWithFrame:self.view.frame];
+            [self.showADView.ADImageView setImage:[UIImage imageWithContentsOfFile:_localImagePath]];
+            self.showADView.delegate = self;
+            [self.view addSubview:self.showADView];
             
-            [self.view addSubview:self.skipBtn];
-            
-            [self getSaveData];
-            [self setTime];
+            NSDictionary *dic = [ConfigUtil getADimg];
+            if (dic != nil) {
+                _bParseOld = true;
+                @try {
+                    [self parseADList:dic];
+                }
+                @catch (NSException *exception) {
+                    NSLog(@"__________ %@", exception);
+                }
+            }
             
         } else {
             [_showADView setHidden:true];
@@ -80,48 +79,12 @@
 }
 
 - (void)delayMethod:(id)sender {
+    NSLog(@"---- PubFunc getCurrentVC = %@",[PubFunc getCurrentVC]);
     if ([[PubFunc getCurrentVC] isKindOfClass:[SplashViewController class]]) {
         GJTabBarController *tabBarController = [[GJTabBarController alloc] init];
         tabBarController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
         [self presentViewController:tabBarController animated:YES completion:^{}];
     }
-}
-
-- (void)setTime{
-    _timer= [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timeChange:) userInfo:nil repeats:YES];
-    
-}
-
-- (void)timeChange:(id)time {
-    static int i = 3;
-    if (i < 0) {
-        i = 0;
-    }
-    
-    NSString *str = [NSString stringWithFormat:@"%ds 跳过 ",i ];
-    [self.skipBtn setTitle:str forState:UIControlStateNormal];
-    [self.skipBtn.titleLabel setFont:[UIFont systemFontOfSize:18]];
-    if (i <= 0) {
-        [self skipBtnClick:nil];
-    }
-    i --;
-}
-
--(void)ADImageViewPress{
-//    if ([_ADLinkUrlOld rangeOfString:@"type=app"].location != NSNotFound) {
-//        //跳转到商品详情
-//        
-//    }else{
-    
-        ADWebViewController *vc = [[ADWebViewController alloc] init];
-        if (_ADLinkUrlOld == nil) {
-            vc.url = _ADLinkUrlNew;
-        }else{
-            vc.url = _ADLinkUrlOld;
-        }
-        vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-        [self presentViewController:vc animated:YES completion:^{}];
-//    }
 }
 
 -(void)loadData{
@@ -150,19 +113,6 @@
         
     }];
     
-}
-
--(void)getSaveData{
-    NSDictionary *dic = [ConfigUtil getADimg];
-    if (dic != nil) {
-        _bParseOld = true;
-        @try {
-            [self parseADList:dic];
-        }
-        @catch (NSException *exception) {
-            NSLog(@"__________ %@", exception);
-        }
-    }
 }
 
 -(NSMutableArray *)parseADList:(id)jsonObject{
@@ -195,14 +145,10 @@
     return nil;
 }
 
--(NSString *)getDownloadImgPath{
+-(BOOL)judgeImageExist{
     NSMutableString *sb = [NSMutableString stringWithString:[ConfigUtil getMyDataPath]];
     [sb appendString:@"/ADImage.jpg"];
-    return sb;
-}
-
--(BOOL)judgeImageExist{
-    _localImagePath = [self getDownloadImgPath];
+    _localImagePath = sb;
     NSFileManager *fileManager = [NSFileManager defaultManager];
     bool ret = [fileManager fileExistsAtPath:_localImagePath];
     return ret;
@@ -215,10 +161,6 @@
             NSLog(@"--- down error = %@",error);
         }
     }];
-}
-
--(void)delayEnter{
-    [self delayMethod:nil];
 }
 
 //判断版本
@@ -236,27 +178,29 @@
     return NO;
 }
 
--(UIButton *)skipBtn{
-    if (_skipBtn == nil) {
-        _skipBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _skipBtn.frame = CGRectMake(CGRectGetWidth(self.view.frame) - SkipBtnWidth - SkipRightEdging, SkipTopEdging, SkipBtnWidth, SkipBtnHeight);
-        [_skipBtn addTarget:self action:@selector(skipBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-        _skipBtn.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
-        [_skipBtn setTitle:@"跳过" forState:UIControlStateNormal];
-        _skipBtn.titleLabel.textColor = [UIColor whiteColor];
-        _skipBtn.titleLabel.font = [UIFont systemFontOfSize:15];
-        _skipBtn.alpha = 0.92;
-        _skipBtn.layer.cornerRadius = 4.0;
-        _skipBtn.clipsToBounds = YES;
-    }
-    return _skipBtn;
-}
-
-- (void)skipBtnClick:(id)sender {
-    [self.timer invalidate];
-    self.timer = nil;
+#pragma mark - GuideViewDelegate
+//点击‘开始体验’
+-(void)onDoneButtonPressed{
     [self delayMethod:nil];
 }
+
+#pragma mark - ShowADViewDelegate
+ //点击‘跳转’按钮
+-(void)onSkipButtonPressed:(id)sender{
+    [self delayMethod:nil];
+}
+ //点击广告图片
+-(void)onADImageViewPress:(id)sender{
+    ADWebViewController *vc = [[ADWebViewController alloc] init];
+    if (_ADLinkUrlOld == nil) {
+        vc.url = _ADLinkUrlNew;
+    }else{
+        vc.url = _ADLinkUrlOld;
+    }
+    vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:vc animated:YES completion:^{}];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

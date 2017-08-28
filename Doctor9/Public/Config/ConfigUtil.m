@@ -71,7 +71,7 @@
 
 + (id)getADimg {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    return [userDefaults stringForKey:VERSION_INFO_KEY];
+    return [userDefaults stringForKey:ADIMG_DATE_STR];
 }
 
 + (void)setADimg:(id)ADimg {

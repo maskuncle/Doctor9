@@ -20,8 +20,8 @@
 #import <UIKit/UIKit.h>
 @protocol ShowADViewDelegate <NSObject>
 @optional
--(void)onSkipButtonPressed:(id)sender;
--(void)onADImageViewPress:(id)sender;
+-(void)onSkipButtonPressed:(id)sender;  //点击‘跳转’按钮
+-(void)onADImageViewPress:(id)sender;   //点击广告图片
 
 @end
 
