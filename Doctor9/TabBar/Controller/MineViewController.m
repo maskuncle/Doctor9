@@ -1,28 +1,22 @@
 //
-//  GJTabBarController.m
+//  MineViewController.m
 //  Doctor9
 //
-//  Created by heguanjie on 17/8/25.
+//  Created by heguanjie on 17/8/29.
 //  Copyright © 2017年 何冠颉. All rights reserved.
 //
 
-#import "GJTabBarController.h"
+#import "MineViewController.h"
 
-@interface GJTabBarController ()
+@interface MineViewController ()
 
 @end
 
-@implementation GJTabBarController
+@implementation MineViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    UIViewController *firstController = [[UIViewController alloc] init];
-    // 给控制器 包装 一个导航控制器
-    UINavigationController *   nav = [[UINavigationController alloc] initWithRootViewController:firstController];
-    // 添加为子控制器
-    [self addChildViewController:nav];
 }
 
 - (void)didReceiveMemoryWarning {

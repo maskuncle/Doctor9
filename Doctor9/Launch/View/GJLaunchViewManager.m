@@ -202,7 +202,6 @@
 //点击广告图片
 -(void)onADImageViewPress:(id)sender{
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self removeFromSuperview];
         ADWebViewController *adVc = [[ADWebViewController alloc] init];
         if ([PubFunc isEmpty:_adModelOld.link_url]) {
             adVc.url = _adModel.link_url;
@@ -211,6 +210,7 @@
         }
         adVc.hidesBottomBarWhenPushed=YES;
         [[UIApplication sharedApplication].keyWindow.rootViewController.childViewControllers[0] pushViewController:adVc animated:YES];
+        [self removeFromSuperview];
     });
 }
 

@@ -30,9 +30,22 @@
 		8990B0EF1F500BCC0037B01E /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8990B0EE1F500BCC0037B01E /* BaseViewController.m */; };
 		8990B0F21F500BF90037B01E /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8990B0F11F500BF90037B01E /* BaseModel.m */; };
 		8990B0F51F500DC40037B01E /* ShowADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8990B0F41F500DC40037B01E /* ShowADView.m */; };
-		8990B0F81F5018670037B01E /* GJTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8990B0F71F5018670037B01E /* GJTabBarController.m */; };
 		89DD72E11F53B3BF00E4117B /* GJLaunchViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DD72E01F53B3BF00E4117B /* GJLaunchViewManager.m */; };
 		89DD72E41F53B3E100E4117B /* GJAdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DD72E31F53B3E100E4117B /* GJAdModel.m */; };
+		89F6B9DB1F55085B001C2FEC /* main_badge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89F6B9D91F55085B001C2FEC /* main_badge@2x.png */; };
+		89F6B9DC1F55085B001C2FEC /* main_badge@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89F6B9DA1F55085B001C2FEC /* main_badge@3x.png */; };
+		89F6B9E71F550DC1001C2FEC /* GJTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6B9E61F550DC1001C2FEC /* GJTabBarController.m */; };
+		89F6B9ED1F550E66001C2FEC /* UITabBarItem+BadgeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6B9EC1F550E66001C2FEC /* UITabBarItem+BadgeColor.m */; };
+		89F6B9F01F550ED6001C2FEC /* GJBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6B9EF1F550ED6001C2FEC /* GJBadgeView.m */; };
+		89F6B9F31F550F3F001C2FEC /* GJTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6B9F21F550F3F001C2FEC /* GJTabBarButton.m */; };
+		89F6B9F61F550FF5001C2FEC /* GJTabBarConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6B9F51F550FF5001C2FEC /* GJTabBarConfig.m */; };
+		89F6B9F91F5510B0001C2FEC /* GJCenterTabBarBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6B9F81F5510B0001C2FEC /* GJCenterTabBarBtn.m */; };
+		89F6B9FC1F55115E001C2FEC /* GJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6B9FB1F55115E001C2FEC /* GJTabBar.m */; };
+		89F6B9FF1F551393001C2FEC /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6B9FE1F551393001C2FEC /* MainViewController.m */; };
+		89F6BA021F5513AF001C2FEC /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6BA011F5513AF001C2FEC /* SecondViewController.m */; };
+		89F6BA051F5513BF001C2FEC /* MidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6BA041F5513BF001C2FEC /* MidViewController.m */; };
+		89F6BA081F5513CC001C2FEC /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6BA071F5513CC001C2FEC /* DiscoverViewController.m */; };
+		89F6BA0B1F5513EB001C2FEC /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F6BA0A1F5513EB001C2FEC /* MineViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,12 +110,36 @@
 		8990B0F11F500BF90037B01E /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		8990B0F31F500DC40037B01E /* ShowADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowADView.h; sourceTree = "<group>"; };
 		8990B0F41F500DC40037B01E /* ShowADView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowADView.m; sourceTree = "<group>"; };
-		8990B0F61F5018670037B01E /* GJTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJTabBarController.h; sourceTree = "<group>"; };
-		8990B0F71F5018670037B01E /* GJTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJTabBarController.m; sourceTree = "<group>"; };
 		89DD72DF1F53B3BF00E4117B /* GJLaunchViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJLaunchViewManager.h; sourceTree = "<group>"; };
 		89DD72E01F53B3BF00E4117B /* GJLaunchViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJLaunchViewManager.m; sourceTree = "<group>"; };
 		89DD72E21F53B3E100E4117B /* GJAdModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJAdModel.h; sourceTree = "<group>"; };
 		89DD72E31F53B3E100E4117B /* GJAdModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJAdModel.m; sourceTree = "<group>"; };
+		89F6B9D91F55085B001C2FEC /* main_badge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_badge@2x.png"; sourceTree = "<group>"; };
+		89F6B9DA1F55085B001C2FEC /* main_badge@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_badge@3x.png"; sourceTree = "<group>"; };
+		89F6B9E51F550DC1001C2FEC /* GJTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJTabBarController.h; sourceTree = "<group>"; };
+		89F6B9E61F550DC1001C2FEC /* GJTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJTabBarController.m; sourceTree = "<group>"; };
+		89F6B9EB1F550E66001C2FEC /* UITabBarItem+BadgeColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarItem+BadgeColor.h"; sourceTree = "<group>"; };
+		89F6B9EC1F550E66001C2FEC /* UITabBarItem+BadgeColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarItem+BadgeColor.m"; sourceTree = "<group>"; };
+		89F6B9EE1F550ED6001C2FEC /* GJBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJBadgeView.h; sourceTree = "<group>"; };
+		89F6B9EF1F550ED6001C2FEC /* GJBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJBadgeView.m; sourceTree = "<group>"; };
+		89F6B9F11F550F3F001C2FEC /* GJTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJTabBarButton.h; sourceTree = "<group>"; };
+		89F6B9F21F550F3F001C2FEC /* GJTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJTabBarButton.m; sourceTree = "<group>"; };
+		89F6B9F41F550FF5001C2FEC /* GJTabBarConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJTabBarConfig.h; sourceTree = "<group>"; };
+		89F6B9F51F550FF5001C2FEC /* GJTabBarConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJTabBarConfig.m; sourceTree = "<group>"; };
+		89F6B9F71F5510B0001C2FEC /* GJCenterTabBarBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJCenterTabBarBtn.h; sourceTree = "<group>"; };
+		89F6B9F81F5510B0001C2FEC /* GJCenterTabBarBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJCenterTabBarBtn.m; sourceTree = "<group>"; };
+		89F6B9FA1F55115E001C2FEC /* GJTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJTabBar.h; sourceTree = "<group>"; };
+		89F6B9FB1F55115E001C2FEC /* GJTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJTabBar.m; sourceTree = "<group>"; };
+		89F6B9FD1F551393001C2FEC /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		89F6B9FE1F551393001C2FEC /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		89F6BA001F5513AF001C2FEC /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		89F6BA011F5513AF001C2FEC /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		89F6BA031F5513BF001C2FEC /* MidViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidViewController.h; sourceTree = "<group>"; };
+		89F6BA041F5513BF001C2FEC /* MidViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidViewController.m; sourceTree = "<group>"; };
+		89F6BA061F5513CC001C2FEC /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
+		89F6BA071F5513CC001C2FEC /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
+		89F6BA091F5513EB001C2FEC /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		89F6BA0A1F5513EB001C2FEC /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		8D8185CA71AD9C417E5525B5 /* Pods-Doctor9.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doctor9.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Doctor9/Pods-Doctor9.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,6 +213,7 @@
 			children = (
 				892C33DA1F4EC0CF00026DE7 /* Public */,
 				892C33D31F4EC01D00026DE7 /* Launch */,
+				89F6B9E11F5508BE001C2FEC /* TabBar */,
 				892C33AD1F4EAFBD00026DE7 /* Resource */,
 				8929CB291F4D985600C9BE09 /* Supporting Files */,
 			);
@@ -226,6 +264,8 @@
 		892C33AE1F4EAFBD00026DE7 /* Picture */ = {
 			isa = PBXGroup;
 			children = (
+				89F6B9D91F55085B001C2FEC /* main_badge@2x.png */,
+				89F6B9DA1F55085B001C2FEC /* main_badge@3x.png */,
 				892C33E31F4EC4BD00026DE7 /* guide1.png */,
 				892C33E41F4EC4BD00026DE7 /* guide2.png */,
 				892C33E51F4EC4BD00026DE7 /* guide3.png */,
@@ -250,8 +290,6 @@
 			children = (
 				894C25B71F4F075900ABD4EF /* ADWebViewController.h */,
 				894C25B81F4F075900ABD4EF /* ADWebViewController.m */,
-				8990B0F61F5018670037B01E /* GJTabBarController.h */,
-				8990B0F71F5018670037B01E /* GJTabBarController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -323,6 +361,61 @@
 				8990B0F11F500BF90037B01E /* BaseModel.m */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		89F6B9E11F5508BE001C2FEC /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				89F6B9E21F5508BE001C2FEC /* Controller */,
+				89F6B9E31F5508BE001C2FEC /* Model */,
+				89F6B9E41F5508BE001C2FEC /* View */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		89F6B9E21F5508BE001C2FEC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				89F6B9E51F550DC1001C2FEC /* GJTabBarController.h */,
+				89F6B9E61F550DC1001C2FEC /* GJTabBarController.m */,
+				89F6B9FD1F551393001C2FEC /* MainViewController.h */,
+				89F6B9FE1F551393001C2FEC /* MainViewController.m */,
+				89F6BA001F5513AF001C2FEC /* SecondViewController.h */,
+				89F6BA011F5513AF001C2FEC /* SecondViewController.m */,
+				89F6BA031F5513BF001C2FEC /* MidViewController.h */,
+				89F6BA041F5513BF001C2FEC /* MidViewController.m */,
+				89F6BA061F5513CC001C2FEC /* DiscoverViewController.h */,
+				89F6BA071F5513CC001C2FEC /* DiscoverViewController.m */,
+				89F6BA091F5513EB001C2FEC /* MineViewController.h */,
+				89F6BA0A1F5513EB001C2FEC /* MineViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		89F6B9E31F5508BE001C2FEC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				89F6B9F41F550FF5001C2FEC /* GJTabBarConfig.h */,
+				89F6B9F51F550FF5001C2FEC /* GJTabBarConfig.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		89F6B9E41F5508BE001C2FEC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				89F6B9EB1F550E66001C2FEC /* UITabBarItem+BadgeColor.h */,
+				89F6B9EC1F550E66001C2FEC /* UITabBarItem+BadgeColor.m */,
+				89F6B9EE1F550ED6001C2FEC /* GJBadgeView.h */,
+				89F6B9EF1F550ED6001C2FEC /* GJBadgeView.m */,
+				89F6B9F11F550F3F001C2FEC /* GJTabBarButton.h */,
+				89F6B9F21F550F3F001C2FEC /* GJTabBarButton.m */,
+				89F6B9F71F5510B0001C2FEC /* GJCenterTabBarBtn.h */,
+				89F6B9F81F5510B0001C2FEC /* GJCenterTabBarBtn.m */,
+				89F6B9FA1F55115E001C2FEC /* GJTabBar.h */,
+				89F6B9FB1F55115E001C2FEC /* GJTabBar.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -437,9 +530,11 @@
 				892C33E81F4EC4BD00026DE7 /* guide2.png in Resources */,
 				8929CB391F4D985600C9BE09 /* LaunchScreen.storyboard in Resources */,
 				8929CB361F4D985600C9BE09 /* Assets.xcassets in Resources */,
+				89F6B9DB1F55085B001C2FEC /* main_badge@2x.png in Resources */,
 				892C33B01F4EB00900026DE7 /* welcome.png in Resources */,
 				892C33E91F4EC4BD00026DE7 /* guide3.png in Resources */,
 				8929CB341F4D985600C9BE09 /* Main.storyboard in Resources */,
+				89F6B9DC1F55085B001C2FEC /* main_badge@3x.png in Resources */,
 				892C33EA1F4EC4BD00026DE7 /* guide4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -519,20 +614,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89F6B9E71F550DC1001C2FEC /* GJTabBarController.m in Sources */,
+				89F6B9F31F550F3F001C2FEC /* GJTabBarButton.m in Sources */,
 				8929CB2E1F4D985600C9BE09 /* AppDelegate.m in Sources */,
 				8990B0EF1F500BCC0037B01E /* BaseViewController.m in Sources */,
+				89F6B9FC1F55115E001C2FEC /* GJTabBar.m in Sources */,
 				892C33ED1F4ED58F00026DE7 /* GJWebViewProgressView.m in Sources */,
 				89DD72E11F53B3BF00E4117B /* GJLaunchViewManager.m in Sources */,
+				89F6B9F61F550FF5001C2FEC /* GJTabBarConfig.m in Sources */,
 				8990B0F21F500BF90037B01E /* BaseModel.m in Sources */,
 				894C25B91F4F075900ABD4EF /* ADWebViewController.m in Sources */,
 				8990B0E71F4FB7980037B01E /* NetworkRequester.m in Sources */,
+				89F6BA021F5513AF001C2FEC /* SecondViewController.m in Sources */,
+				89F6B9FF1F551393001C2FEC /* MainViewController.m in Sources */,
 				8929CB2B1F4D985600C9BE09 /* main.m in Sources */,
 				892C33E21F4EC3FA00026DE7 /* GuideView.m in Sources */,
+				89F6BA0B1F5513EB001C2FEC /* MineViewController.m in Sources */,
+				89F6BA081F5513CC001C2FEC /* DiscoverViewController.m in Sources */,
+				89F6BA051F5513BF001C2FEC /* MidViewController.m in Sources */,
+				89F6B9ED1F550E66001C2FEC /* UITabBarItem+BadgeColor.m in Sources */,
+				89F6B9F01F550ED6001C2FEC /* GJBadgeView.m in Sources */,
 				8990B0F51F500DC40037B01E /* ShowADView.m in Sources */,
 				8990B0EB1F4FBF210037B01E /* NetworkRequester+Launch.m in Sources */,
+				89F6B9F91F5510B0001C2FEC /* GJCenterTabBarBtn.m in Sources */,
 				898E02BE1F510CEE0064F55B /* PubFunc.m in Sources */,
 				89DD72E41F53B3E100E4117B /* GJAdModel.m in Sources */,
-				8990B0F81F5018670037B01E /* GJTabBarController.m in Sources */,
 				892C33DF1F4EC1BF00026DE7 /* ConfigUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
