@@ -11,9 +11,11 @@
 1.  Base
 
 存放基类文件，新建ViewController、Model、DB等需要继承里面的类。
+
 2. Network
 
 该工程使用AFNetworking框架做网络请求使用，当研发的功能使用到请求时，需要在文件夹下创建相关的类别来集成使用（例：Launch）
+
 3. Config
 
 a)AppConfig     app或机型信息配置 
