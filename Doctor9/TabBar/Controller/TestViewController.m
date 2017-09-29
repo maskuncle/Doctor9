@@ -1,24 +1,24 @@
 //
-//  BaseViewController.m
+//  TestViewController.m
 //  Doctor9
 //
-//  Created by heguanjie on 17/8/24.
+//  Created by heguanjie on 17/9/27.
 //  Copyright © 2017年 何冠颉. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "TestViewController.h"
 
-@interface BaseViewController ()
+@interface TestViewController ()
 
 @end
 
-@implementation BaseViewController
+@implementation TestViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    
 }
 
 - (void)didReceiveMemoryWarning {

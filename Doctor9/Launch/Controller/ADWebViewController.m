@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //也可以继承WKBaseVC来设计
     self.view.backgroundColor = [UIColor whiteColor];
     self.webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
     self.webView.navigationDelegate = self;
@@ -23,6 +24,18 @@
     self.webView.scrollView.backgroundColor = [UIColor whiteColor];
     self.webView.allowsBackForwardNavigationGestures = YES;
     [self.view addSubview:self.webView];
+    
+    /*
+     //谨慎使用  的request用法
+    NSString * htmlResponseStr=[NSString stringWithContentsOfURL:[NSURL URLWithString:_urlStr] encoding:NSUTF8StringEncoding error:Nil];
+    NSURLRequest *request;
+    if(![PubFunc isEmpty:htmlResponseStr]){
+        request =[NSURLRequest requestWithURL:[NSURL URLWithString:_urlStr] cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:3];
+    }
+    else{
+        request = [NSURLRequest requestWithURL:[NSURL URLWithString:_urlStr] cachePolicy:NSURLRequestReturnCacheDataDontLoad timeoutInterval:3];
+    }
+    */
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.url]];
     [self.webView loadRequest:request];
     [self.webView setNeedsUpdateConstraints];

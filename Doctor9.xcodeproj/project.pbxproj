@@ -30,6 +30,8 @@
 		8990B0EF1F500BCC0037B01E /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8990B0EE1F500BCC0037B01E /* BaseViewController.m */; };
 		8990B0F21F500BF90037B01E /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8990B0F11F500BF90037B01E /* BaseModel.m */; };
 		8990B0F51F500DC40037B01E /* ShowADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8990B0F41F500DC40037B01E /* ShowADView.m */; };
+		8999ABD41F6A246B00579508 /* BaseWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8999ABD31F6A246B00579508 /* BaseWKWebViewController.m */; };
+		89A6F5051F7B3ECD00E226B1 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A6F5041F7B3ECD00E226B1 /* TestViewController.m */; };
 		89DD72E11F53B3BF00E4117B /* GJLaunchViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DD72E01F53B3BF00E4117B /* GJLaunchViewManager.m */; };
 		89DD72E41F53B3E100E4117B /* GJAdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DD72E31F53B3E100E4117B /* GJAdModel.m */; };
 		89F6B9DB1F55085B001C2FEC /* main_badge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89F6B9D91F55085B001C2FEC /* main_badge@2x.png */; };
@@ -110,6 +112,10 @@
 		8990B0F11F500BF90037B01E /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		8990B0F31F500DC40037B01E /* ShowADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowADView.h; sourceTree = "<group>"; };
 		8990B0F41F500DC40037B01E /* ShowADView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowADView.m; sourceTree = "<group>"; };
+		8999ABD21F6A246B00579508 /* BaseWKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseWKWebViewController.h; sourceTree = "<group>"; };
+		8999ABD31F6A246B00579508 /* BaseWKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseWKWebViewController.m; sourceTree = "<group>"; };
+		89A6F5031F7B3ECD00E226B1 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		89A6F5041F7B3ECD00E226B1 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		89DD72DF1F53B3BF00E4117B /* GJLaunchViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJLaunchViewManager.h; sourceTree = "<group>"; };
 		89DD72E01F53B3BF00E4117B /* GJLaunchViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJLaunchViewManager.m; sourceTree = "<group>"; };
 		89DD72E21F53B3E100E4117B /* GJAdModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJAdModel.h; sourceTree = "<group>"; };
@@ -308,10 +314,10 @@
 			children = (
 				892C33E01F4EC3FA00026DE7 /* GuideView.h */,
 				892C33E11F4EC3FA00026DE7 /* GuideView.m */,
-				892C33EB1F4ED58F00026DE7 /* GJWebViewProgressView.h */,
-				892C33EC1F4ED58F00026DE7 /* GJWebViewProgressView.m */,
 				8990B0F31F500DC40037B01E /* ShowADView.h */,
 				8990B0F41F500DC40037B01E /* ShowADView.m */,
+				892C33EB1F4ED58F00026DE7 /* GJWebViewProgressView.h */,
+				892C33EC1F4ED58F00026DE7 /* GJWebViewProgressView.m */,
 				89DD72DF1F53B3BF00E4117B /* GJLaunchViewManager.h */,
 				89DD72E01F53B3BF00E4117B /* GJLaunchViewManager.m */,
 			);
@@ -355,6 +361,8 @@
 		8990B0EC1F500BCC0037B01E /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				8999ABD21F6A246B00579508 /* BaseWKWebViewController.h */,
+				8999ABD31F6A246B00579508 /* BaseWKWebViewController.m */,
 				8990B0ED1F500BCC0037B01E /* BaseViewController.h */,
 				8990B0EE1F500BCC0037B01E /* BaseViewController.m */,
 				8990B0F01F500BF90037B01E /* BaseModel.h */,
@@ -388,6 +396,8 @@
 				89F6BA071F5513CC001C2FEC /* DiscoverViewController.m */,
 				89F6BA091F5513EB001C2FEC /* MineViewController.h */,
 				89F6BA0A1F5513EB001C2FEC /* MineViewController.m */,
+				89A6F5031F7B3ECD00E226B1 /* TestViewController.h */,
+				89A6F5041F7B3ECD00E226B1 /* TestViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -616,8 +626,10 @@
 			files = (
 				89F6B9E71F550DC1001C2FEC /* GJTabBarController.m in Sources */,
 				89F6B9F31F550F3F001C2FEC /* GJTabBarButton.m in Sources */,
+				89A6F5051F7B3ECD00E226B1 /* TestViewController.m in Sources */,
 				8929CB2E1F4D985600C9BE09 /* AppDelegate.m in Sources */,
 				8990B0EF1F500BCC0037B01E /* BaseViewController.m in Sources */,
+				8999ABD41F6A246B00579508 /* BaseWKWebViewController.m in Sources */,
 				89F6B9FC1F55115E001C2FEC /* GJTabBar.m in Sources */,
 				892C33ED1F4ED58F00026DE7 /* GJWebViewProgressView.m in Sources */,
 				89DD72E11F53B3BF00E4117B /* GJLaunchViewManager.m in Sources */,

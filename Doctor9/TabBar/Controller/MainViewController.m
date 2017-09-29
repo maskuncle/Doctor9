@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "GJTabBarController.h"
+#import "TestViewController.h"
 
 @interface MainViewController ()<UITableViewDelegate , GJTabBarDelegate>
 
@@ -44,8 +45,8 @@
 
 #pragma mark - 跳转页面
 - (void)btnClick{
-    UIViewController *vc = [UIViewController new];
-    vc.view.backgroundColor = [UIColor whiteColor];
+//    UIViewController *vc = [UIViewController new];
+    TestViewController *vc = [[TestViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

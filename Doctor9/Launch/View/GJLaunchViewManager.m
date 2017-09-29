@@ -208,8 +208,9 @@
         }else{
             adVc.url = _adModelOld.link_url;
         }
-        adVc.hidesBottomBarWhenPushed=YES;
-        [[UIApplication sharedApplication].keyWindow.rootViewController.childViewControllers[0] pushViewController:adVc animated:YES];
+//        adVc.hidesBottomBarWhenPushed=YES;
+//        adVc.tabBarController.tabBar.hidden = YES;
+        [[UIApplication sharedApplication].keyWindow.rootViewController.childViewControllers[0] pushViewController:adVc animated:NO];
         [self removeFromSuperview];
     });
 }
