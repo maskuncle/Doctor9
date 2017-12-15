@@ -260,7 +260,7 @@
     self.navigationItem.title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
 //    [self showLeftBarButtonItem];
 //    [_refreshControl endRefreshing];
-    [webView.scrollView.header endRefreshing];
+    [webView.scrollView.mj_header endRefreshing];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
@@ -296,7 +296,7 @@
 //    [self showLeftBarButtonItem];
     
 //    [_refreshControl endRefreshing];
-    [webView.scrollView.header endRefreshing];
+    [webView.scrollView.mj_header endRefreshing];
 }
 
 //页面加载失败

@@ -30,7 +30,26 @@
 		8990B0EF1F500BCC0037B01E /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8990B0EE1F500BCC0037B01E /* BaseViewController.m */; };
 		8990B0F21F500BF90037B01E /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8990B0F11F500BF90037B01E /* BaseModel.m */; };
 		8990B0F51F500DC40037B01E /* ShowADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8990B0F41F500DC40037B01E /* ShowADView.m */; };
+		89922AF11FD4ED69004FA9F9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 89922AEF1FD4ED69004FA9F9 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8999ABD41F6A246B00579508 /* BaseWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8999ABD31F6A246B00579508 /* BaseWKWebViewController.m */; };
+		89A5CBF01F94633F00DC2B03 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A5CBE61F94633F00DC2B03 /* AnimationViewController.m */; };
+		89A5CBF11F94633F00DC2B03 /* ArcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A5CBE81F94633F00DC2B03 /* ArcViewController.m */; };
+		89A5CBF21F94633F00DC2B03 /* HubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A5CBEA1F94633F00DC2B03 /* HubViewController.m */; };
+		89A5CBF31F94633F00DC2B03 /* RoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A5CBEC1F94633F00DC2B03 /* RoundViewController.m */; };
+		89A5CBF41F94633F00DC2B03 /* SectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A5CBEE1F94633F00DC2B03 /* SectorViewController.m */; };
+		89A5CBF71F9463C500DC2B03 /* ArcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A5CBF61F9463C500DC2B03 /* ArcView.m */; };
+		89A5CBFA1F9463D900DC2B03 /* SectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A5CBF91F9463D900DC2B03 /* SectorView.m */; };
+		89A5CBFD1F9463E700DC2B03 /* RoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A5CBFC1F9463E700DC2B03 /* RoundView.m */; };
+		89A5CC001F94640600DC2B03 /* HubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A5CBFF1F94640600DC2B03 /* HubView.m */; };
+		89A5CC141F94933C00DC2B03 /* NSDate+GKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A5CC031F94933C00DC2B03 /* NSDate+GKExtension.m */; };
+		89A5CC151F94933C00DC2B03 /* NSString+MLBUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A5CC051F94933C00DC2B03 /* NSString+MLBUtilities.m */; };
+		89A5CC181F94933C00DC2B03 /* UIButton+ImageWithLable.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A5CC0B1F94933C00DC2B03 /* UIButton+ImageWithLable.m */; };
+		89A5CC191F94933C00DC2B03 /* UIColor+MLBUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A5CC0D1F94933C00DC2B03 /* UIColor+MLBUtilities.m */; };
+		89A5CC1A1F94933C00DC2B03 /* UIImageView+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A5CC0F1F94933C00DC2B03 /* UIImageView+Util.m */; };
+		89A5CC1B1F94933C00DC2B03 /* UILabel+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A5CC111F94933C00DC2B03 /* UILabel+Utils.m */; };
+		89A5CC1C1F94933C00DC2B03 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A5CC131F94933C00DC2B03 /* UIView+Frame.m */; };
+		89A5CC201F94934500DC2B03 /* OMGToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A5CC1F1F94934500DC2B03 /* OMGToast.m */; };
+		89A5CC231F94997600DC2B03 /* UIImage+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A5CC221F94997600DC2B03 /* UIImage+Util.m */; };
 		89A6F5051F7B3ECD00E226B1 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A6F5041F7B3ECD00E226B1 /* TestViewController.m */; };
 		89DD72E11F53B3BF00E4117B /* GJLaunchViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DD72E01F53B3BF00E4117B /* GJLaunchViewManager.m */; };
 		89DD72E41F53B3E100E4117B /* GJAdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DD72E31F53B3E100E4117B /* GJAdModel.m */; };
@@ -112,8 +131,46 @@
 		8990B0F11F500BF90037B01E /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		8990B0F31F500DC40037B01E /* ShowADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowADView.h; sourceTree = "<group>"; };
 		8990B0F41F500DC40037B01E /* ShowADView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowADView.m; sourceTree = "<group>"; };
+		89922AEF1FD4ED69004FA9F9 /* Reachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		89922AF01FD4ED69004FA9F9 /* Reachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		8999ABD21F6A246B00579508 /* BaseWKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseWKWebViewController.h; sourceTree = "<group>"; };
 		8999ABD31F6A246B00579508 /* BaseWKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseWKWebViewController.m; sourceTree = "<group>"; };
+		89A5CBE51F94633F00DC2B03 /* AnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
+		89A5CBE61F94633F00DC2B03 /* AnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationViewController.m; sourceTree = "<group>"; };
+		89A5CBE71F94633F00DC2B03 /* ArcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArcViewController.h; sourceTree = "<group>"; };
+		89A5CBE81F94633F00DC2B03 /* ArcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArcViewController.m; sourceTree = "<group>"; };
+		89A5CBE91F94633F00DC2B03 /* HubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HubViewController.h; sourceTree = "<group>"; };
+		89A5CBEA1F94633F00DC2B03 /* HubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HubViewController.m; sourceTree = "<group>"; };
+		89A5CBEB1F94633F00DC2B03 /* RoundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundViewController.h; sourceTree = "<group>"; };
+		89A5CBEC1F94633F00DC2B03 /* RoundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundViewController.m; sourceTree = "<group>"; };
+		89A5CBED1F94633F00DC2B03 /* SectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectorViewController.h; sourceTree = "<group>"; };
+		89A5CBEE1F94633F00DC2B03 /* SectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectorViewController.m; sourceTree = "<group>"; };
+		89A5CBF51F9463C500DC2B03 /* ArcView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArcView.h; sourceTree = "<group>"; };
+		89A5CBF61F9463C500DC2B03 /* ArcView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArcView.m; sourceTree = "<group>"; };
+		89A5CBF81F9463D900DC2B03 /* SectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectorView.h; sourceTree = "<group>"; };
+		89A5CBF91F9463D900DC2B03 /* SectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectorView.m; sourceTree = "<group>"; };
+		89A5CBFB1F9463E700DC2B03 /* RoundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundView.h; sourceTree = "<group>"; };
+		89A5CBFC1F9463E700DC2B03 /* RoundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundView.m; sourceTree = "<group>"; };
+		89A5CBFE1F94640600DC2B03 /* HubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HubView.h; sourceTree = "<group>"; };
+		89A5CBFF1F94640600DC2B03 /* HubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HubView.m; sourceTree = "<group>"; };
+		89A5CC021F94933C00DC2B03 /* NSDate+GKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+GKExtension.h"; sourceTree = "<group>"; };
+		89A5CC031F94933C00DC2B03 /* NSDate+GKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+GKExtension.m"; sourceTree = "<group>"; };
+		89A5CC041F94933C00DC2B03 /* NSString+MLBUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MLBUtilities.h"; sourceTree = "<group>"; };
+		89A5CC051F94933C00DC2B03 /* NSString+MLBUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MLBUtilities.m"; sourceTree = "<group>"; };
+		89A5CC0A1F94933C00DC2B03 /* UIButton+ImageWithLable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageWithLable.h"; sourceTree = "<group>"; };
+		89A5CC0B1F94933C00DC2B03 /* UIButton+ImageWithLable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageWithLable.m"; sourceTree = "<group>"; };
+		89A5CC0C1F94933C00DC2B03 /* UIColor+MLBUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MLBUtilities.h"; sourceTree = "<group>"; };
+		89A5CC0D1F94933C00DC2B03 /* UIColor+MLBUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MLBUtilities.m"; sourceTree = "<group>"; };
+		89A5CC0E1F94933C00DC2B03 /* UIImageView+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Util.h"; sourceTree = "<group>"; };
+		89A5CC0F1F94933C00DC2B03 /* UIImageView+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Util.m"; sourceTree = "<group>"; };
+		89A5CC101F94933C00DC2B03 /* UILabel+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Utils.h"; sourceTree = "<group>"; };
+		89A5CC111F94933C00DC2B03 /* UILabel+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Utils.m"; sourceTree = "<group>"; };
+		89A5CC121F94933C00DC2B03 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		89A5CC131F94933C00DC2B03 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		89A5CC1E1F94934500DC2B03 /* OMGToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMGToast.h; sourceTree = "<group>"; };
+		89A5CC1F1F94934500DC2B03 /* OMGToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMGToast.m; sourceTree = "<group>"; };
+		89A5CC211F94997600DC2B03 /* UIImage+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Util.h"; sourceTree = "<group>"; };
+		89A5CC221F94997600DC2B03 /* UIImage+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Util.m"; sourceTree = "<group>"; };
 		89A6F5031F7B3ECD00E226B1 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		89A6F5041F7B3ECD00E226B1 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		89DD72DF1F53B3BF00E4117B /* GJLaunchViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJLaunchViewManager.h; sourceTree = "<group>"; };
@@ -218,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				892C33DA1F4EC0CF00026DE7 /* Public */,
+				89A5CBE31F94633F00DC2B03 /* Animation */,
 				892C33D31F4EC01D00026DE7 /* Launch */,
 				89F6B9E11F5508BE001C2FEC /* TabBar */,
 				892C33AD1F4EAFBD00026DE7 /* Resource */,
@@ -327,6 +385,8 @@
 		892C33DA1F4EC0CF00026DE7 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				89A5CC1D1F94934500DC2B03 /* Tools */,
+				89A5CC011F94933C00DC2B03 /* Category */,
 				8990B0EC1F500BCC0037B01E /* Base */,
 				8990B0E41F4FB6FD0037B01E /* Network */,
 				892C33DB1F4EC0CF00026DE7 /* Config */,
@@ -349,6 +409,8 @@
 		8990B0E41F4FB6FD0037B01E /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				89922AF01FD4ED69004FA9F9 /* Reachability.h */,
+				89922AEF1FD4ED69004FA9F9 /* Reachability.m */,
 				8990B0E81F4FB86D0037B01E /* NetworkCongfig.h */,
 				8990B0E51F4FB7980037B01E /* NetworkRequester.h */,
 				8990B0E61F4FB7980037B01E /* NetworkRequester.m */,
@@ -369,6 +431,79 @@
 				8990B0F11F500BF90037B01E /* BaseModel.m */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		89A5CBE31F94633F00DC2B03 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				89A5CBE41F94633F00DC2B03 /* Controller */,
+				89A5CBEF1F94633F00DC2B03 /* View */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		89A5CBE41F94633F00DC2B03 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				89A5CBE51F94633F00DC2B03 /* AnimationViewController.h */,
+				89A5CBE61F94633F00DC2B03 /* AnimationViewController.m */,
+				89A5CBED1F94633F00DC2B03 /* SectorViewController.h */,
+				89A5CBEE1F94633F00DC2B03 /* SectorViewController.m */,
+				89A5CBE71F94633F00DC2B03 /* ArcViewController.h */,
+				89A5CBE81F94633F00DC2B03 /* ArcViewController.m */,
+				89A5CBEB1F94633F00DC2B03 /* RoundViewController.h */,
+				89A5CBEC1F94633F00DC2B03 /* RoundViewController.m */,
+				89A5CBE91F94633F00DC2B03 /* HubViewController.h */,
+				89A5CBEA1F94633F00DC2B03 /* HubViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		89A5CBEF1F94633F00DC2B03 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				89A5CBF81F9463D900DC2B03 /* SectorView.h */,
+				89A5CBF91F9463D900DC2B03 /* SectorView.m */,
+				89A5CBF51F9463C500DC2B03 /* ArcView.h */,
+				89A5CBF61F9463C500DC2B03 /* ArcView.m */,
+				89A5CBFB1F9463E700DC2B03 /* RoundView.h */,
+				89A5CBFC1F9463E700DC2B03 /* RoundView.m */,
+				89A5CBFE1F94640600DC2B03 /* HubView.h */,
+				89A5CBFF1F94640600DC2B03 /* HubView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		89A5CC011F94933C00DC2B03 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				89A5CC211F94997600DC2B03 /* UIImage+Util.h */,
+				89A5CC221F94997600DC2B03 /* UIImage+Util.m */,
+				89A5CC021F94933C00DC2B03 /* NSDate+GKExtension.h */,
+				89A5CC031F94933C00DC2B03 /* NSDate+GKExtension.m */,
+				89A5CC041F94933C00DC2B03 /* NSString+MLBUtilities.h */,
+				89A5CC051F94933C00DC2B03 /* NSString+MLBUtilities.m */,
+				89A5CC0A1F94933C00DC2B03 /* UIButton+ImageWithLable.h */,
+				89A5CC0B1F94933C00DC2B03 /* UIButton+ImageWithLable.m */,
+				89A5CC0C1F94933C00DC2B03 /* UIColor+MLBUtilities.h */,
+				89A5CC0D1F94933C00DC2B03 /* UIColor+MLBUtilities.m */,
+				89A5CC0E1F94933C00DC2B03 /* UIImageView+Util.h */,
+				89A5CC0F1F94933C00DC2B03 /* UIImageView+Util.m */,
+				89A5CC101F94933C00DC2B03 /* UILabel+Utils.h */,
+				89A5CC111F94933C00DC2B03 /* UILabel+Utils.m */,
+				89A5CC121F94933C00DC2B03 /* UIView+Frame.h */,
+				89A5CC131F94933C00DC2B03 /* UIView+Frame.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		89A5CC1D1F94934500DC2B03 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				89A5CC1E1F94934500DC2B03 /* OMGToast.h */,
+				89A5CC1F1F94934500DC2B03 /* OMGToast.m */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		89F6B9E11F5508BE001C2FEC /* TabBar */ = {
@@ -498,6 +633,7 @@
 				TargetAttributes = {
 					8929CB251F4D985600C9BE09 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 3RHYNJR87G;
 					};
 					8929CB3E1F4D985600C9BE09 = {
 						CreatedOnToolsVersion = 7.2;
@@ -625,33 +761,52 @@
 			buildActionMask = 2147483647;
 			files = (
 				89F6B9E71F550DC1001C2FEC /* GJTabBarController.m in Sources */,
+				89A5CBF71F9463C500DC2B03 /* ArcView.m in Sources */,
 				89F6B9F31F550F3F001C2FEC /* GJTabBarButton.m in Sources */,
 				89A6F5051F7B3ECD00E226B1 /* TestViewController.m in Sources */,
 				8929CB2E1F4D985600C9BE09 /* AppDelegate.m in Sources */,
+				89A5CC1A1F94933C00DC2B03 /* UIImageView+Util.m in Sources */,
 				8990B0EF1F500BCC0037B01E /* BaseViewController.m in Sources */,
 				8999ABD41F6A246B00579508 /* BaseWKWebViewController.m in Sources */,
 				89F6B9FC1F55115E001C2FEC /* GJTabBar.m in Sources */,
+				89922AF11FD4ED69004FA9F9 /* Reachability.m in Sources */,
+				89A5CC151F94933C00DC2B03 /* NSString+MLBUtilities.m in Sources */,
 				892C33ED1F4ED58F00026DE7 /* GJWebViewProgressView.m in Sources */,
 				89DD72E11F53B3BF00E4117B /* GJLaunchViewManager.m in Sources */,
+				89A5CBF01F94633F00DC2B03 /* AnimationViewController.m in Sources */,
 				89F6B9F61F550FF5001C2FEC /* GJTabBarConfig.m in Sources */,
 				8990B0F21F500BF90037B01E /* BaseModel.m in Sources */,
 				894C25B91F4F075900ABD4EF /* ADWebViewController.m in Sources */,
+				89A5CBF11F94633F00DC2B03 /* ArcViewController.m in Sources */,
 				8990B0E71F4FB7980037B01E /* NetworkRequester.m in Sources */,
+				89A5CC181F94933C00DC2B03 /* UIButton+ImageWithLable.m in Sources */,
 				89F6BA021F5513AF001C2FEC /* SecondViewController.m in Sources */,
 				89F6B9FF1F551393001C2FEC /* MainViewController.m in Sources */,
 				8929CB2B1F4D985600C9BE09 /* main.m in Sources */,
+				89A5CC191F94933C00DC2B03 /* UIColor+MLBUtilities.m in Sources */,
+				89A5CC1C1F94933C00DC2B03 /* UIView+Frame.m in Sources */,
 				892C33E21F4EC3FA00026DE7 /* GuideView.m in Sources */,
 				89F6BA0B1F5513EB001C2FEC /* MineViewController.m in Sources */,
+				89A5CC1B1F94933C00DC2B03 /* UILabel+Utils.m in Sources */,
+				89A5CC201F94934500DC2B03 /* OMGToast.m in Sources */,
 				89F6BA081F5513CC001C2FEC /* DiscoverViewController.m in Sources */,
 				89F6BA051F5513BF001C2FEC /* MidViewController.m in Sources */,
 				89F6B9ED1F550E66001C2FEC /* UITabBarItem+BadgeColor.m in Sources */,
+				89A5CBF31F94633F00DC2B03 /* RoundViewController.m in Sources */,
+				89A5CBFD1F9463E700DC2B03 /* RoundView.m in Sources */,
+				89A5CC231F94997600DC2B03 /* UIImage+Util.m in Sources */,
 				89F6B9F01F550ED6001C2FEC /* GJBadgeView.m in Sources */,
 				8990B0F51F500DC40037B01E /* ShowADView.m in Sources */,
+				89A5CBFA1F9463D900DC2B03 /* SectorView.m in Sources */,
 				8990B0EB1F4FBF210037B01E /* NetworkRequester+Launch.m in Sources */,
 				89F6B9F91F5510B0001C2FEC /* GJCenterTabBarBtn.m in Sources */,
 				898E02BE1F510CEE0064F55B /* PubFunc.m in Sources */,
+				89A5CBF41F94633F00DC2B03 /* SectorViewController.m in Sources */,
 				89DD72E41F53B3E100E4117B /* GJAdModel.m in Sources */,
 				892C33DF1F4EC1BF00026DE7 /* ConfigUtil.m in Sources */,
+				89A5CC001F94640600DC2B03 /* HubView.m in Sources */,
+				89A5CC141F94933C00DC2B03 /* NSDate+GKExtension.m in Sources */,
+				89A5CBF21F94633F00DC2B03 /* HubViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -794,6 +949,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 3RHYNJR87G;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Doctor9/Doctor9Header.pch";
 				INFOPLIST_FILE = Doctor9/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -809,6 +965,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 3RHYNJR87G;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Doctor9/Doctor9Header.pch";
 				INFOPLIST_FILE = Doctor9/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

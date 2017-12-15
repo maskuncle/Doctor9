@@ -7,6 +7,7 @@
 //
 
 #import "PubFunc.h"
+#import "Reachability.h"
 
 @implementation PubFunc
 //获取当前屏幕显示的viewcontroller
@@ -95,4 +96,24 @@
     }
 }
 
++(NetWorkType)getNetWordType{
+    Reachability *reachability   = [Reachability reachabilityWithHostName:@"www.apple.com"];
+    NetworkStatus internetStatus = [reachability currentReachabilityStatus];
+    int netType = NetWorkType_None;
+    switch (internetStatus) {
+        case ReachableViaWiFi:
+            netType = NetWorkType_WIFI;
+            break;
+            
+        case ReachableViaWWAN:
+            netType = NetWorkType_WWAN;
+            break;
+            
+        case NotReachable:
+            netType = NetWorkType_None;
+        default:
+            break;
+    }
+    return netType;
+}
 @end
