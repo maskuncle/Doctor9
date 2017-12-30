@@ -7,8 +7,12 @@
 //
 
 #import "MidViewController.h"
+#import "AnimationViewController.h"
 
-@interface MidViewController ()
+@interface MidViewController () <UITableViewDataSource,UITableViewDelegate>
+
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSMutableArray *dataArray;
 
 @end
 
@@ -17,6 +21,60 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.navigationItem.title = self.tabBarItem.title;
+    
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.tableFooterView = [UIView new];
+    [self.view addSubview:self.tableView];
+}
+
+-(NSMutableArray *)dataArray{
+    if (!_dataArray) {
+        _dataArray = [NSMutableArray new];
+        [_dataArray addObject:@"Sector"];
+        [_dataArray addObject:@"Arc"];
+        [_dataArray addObject:@"Round"];
+        [_dataArray addObject:@"Hub"];
+        [_dataArray addObject:@"Wave"];
+        [_dataArray addObject:@"Shipe"];
+        [_dataArray addObject:@"Radar"];
+        [_dataArray addObject:@"AQiYi"];
+    }
+    return _dataArray;
+}
+
+#pragma mark- UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *ID = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    if (!cell) {
+        cell =[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+    }
+    NSUInteger row = indexPath.row;
+    cell.textLabel.text = self.dataArray[row];
+    return cell;
+}
+
+#pragma mark- UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSUInteger row = indexPath.row;
+    NSString *string = [NSString stringWithFormat:@"%@ViewController",self.dataArray[indexPath.row]];
+    
+    AnimationViewController*vc =[NSClassFromString(string) new];
+    vc.title = self.dataArray[row];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

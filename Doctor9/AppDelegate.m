@@ -53,7 +53,7 @@
     [tabbar addChildController:nav1 title:@"首页" imageName:@"Btn01" selectedImageName:@"SelectBtn01"];
     UINavigationController *nav2 = [[UINavigationController alloc]initWithRootViewController:[SecondViewController new]];
     [tabbar addChildController:nav2 title:@"详情" imageName:@"Btn02" selectedImageName:@"SelectBtn02"];
-    UINavigationController *navMid = [[UINavigationController alloc]initWithRootViewController:[SecondViewController new]];
+    UINavigationController *navMid = [[UINavigationController alloc]initWithRootViewController:[MidViewController new]];
     [tabbar addCenterController:navMid bulge:YES title:@"中间" imageName:@"post_normal" selectedImageName:@"post_normal"];
     UINavigationController *nav3 = [[UINavigationController alloc]initWithRootViewController:[DiscoverViewController new]];
     [tabbar addChildController:nav3 title:@"发现" imageName:@"Btn01" selectedImageName:@"SelectBtn01"];

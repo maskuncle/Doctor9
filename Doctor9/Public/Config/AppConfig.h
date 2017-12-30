@@ -29,12 +29,17 @@
 
 #define iPhone4 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
 
+#define isRetina                  ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define isPad                     (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+
 #define IS_IOS_7        ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
 #define SCREEN_WID      ([[UIScreen mainScreen] bounds].size.width)
 #define SCREEN_HEI      ([[UIScreen mainScreen] bounds].size.height)
 #define STATUS_HEI      ([[UIApplication sharedApplication] statusBarFrame].size.height)
 #define BOTTOMBAR_HEI   49
 #define NAVBAR_HEI      (self.navigationController.navigationBar.frame.size.height)
+#define TOPBAR_HEI      (STATUS_HEI + NAVBAR_HEI)
 
 //颜色和透明度设置
 #define RGBA(r,g,b,a)   [UIColor colorWithRed:(float)r/255.0f green:(float)g/255.0f blue:(float)b/255.0f alpha:a]
@@ -48,5 +53,15 @@
 
 #define CARE_NORMAL_BTN_COLOR    RGBA(0xFF, 0x69, 0x87, 1)
 #define CARE_PRESSED_BTN_COLOR   RGBA(0xd0, 0xcf, 0xcf, 1)
+
+// 字体
+#pragma mark - font
+#define FontWithNameSize(name, size)    [UIFont fontWithName:name size:size]
+#define FontWithSize(size)              [UIFont systemFontOfSize:size]
+#define ScoreFontWithSize(fontSize)     [UIFont fontWithName:@"Bradley Hand" size:fontSize]
+#define BoldFontWithSize(size)          [UIFont boldSystemFontOfSize:size]
+#define BoldSystemFont(size)            [UIFont boldSystemFontOfSize:size]
+#define systemFont(size)                [UIFont systemFontOfSize:size]
+
 
 #endif /* AppConfig_h */
